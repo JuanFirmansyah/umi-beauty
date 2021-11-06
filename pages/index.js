@@ -34,85 +34,106 @@ export default function Home() {
       </nav>
 
       <main className="flex flex-col items-center justify-center w-full text-center bg-gray-100">
-        <div className="relative h-[600px] w-full">
-          <div className="w-full h-96">
-            <Image src="/banner.jpeg" layout="fill" objectFit="cover" />
-          </div>
-          <p className="absolute max-w-4xl top-1/3 text-4xl text-center text-white leading-relaxed font-medium bg-gray-600 mx-7 rounded-2xl p-8 bg-opacity-30">
-            Rahasia Kulit Wajah Mulus dan Glowing Sampai Lanjut Usia
-          </p>
-        </div>
-
-        <div className="flex flex-row justify-evenly w-full h-auto shadow-xl">
-          <div className="h-32 w-full bg-yellow-400 justify-center text-white font-semibold tracking-wide py-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-16 w-16 justify-center m-auto text-white"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fillRule="evenodd"
-                d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                clipRule="evenodd"
-              />
-            </svg>
-            <p className="w-full h-auto">BPOM</p>
-            <p className="w-full h-auto">18210106175</p>
-          </div>
-          <div className="h-32 w-full bg-yellow-400 justify-center text-white font-semibold tracking-wide py-2">
-            <p className="w-full auto">Halal </p>
-          </div>
-          <div className="h-32 w-full bg-yellow-400 justify-center text-white font-semibold tracking-wide py-2">
-            <p className="w-full auto">Aktif Seller</p>
+        <div className="h-[600px] w-full text-center bg-dog-img bg-cover items-center shadow-xl">
+          <div className="w-full h-full justify-center mt-[25%]">
+            <p className="text-4xl text-white leading-relaxed font-medium bg-gray-600 rounded-2xl p-8 bg-opacity-30 max-w-2xl m-auto">
+              Rahasia Kulit Wajah Mulus dan Glowing Sampai Lanjut Usia
+            </p>
           </div>
         </div>
 
         <div className="flex flex-col items-center justify-around mt-6 text-4xl max-w-2xl">
           {/* Tesimonial */}
           <selection className="w-full">
-            <h1>Testimonial</h1>
-            <div className="flex flex-grow gap-3 w-full h-auto bg-white rounded-2xl ">
-              <div className="relative h-[360px] w-[400px]">
+            <h1 className="font-medium text-5xl py-4">Testimonial</h1>
+            {/* Row 1 */}
+            <div className="flex flex-row flex-grow gap-4 w-full h-auto bg-white rounded-2xl ">
+              <div className="relative h-64 w-full">
                 <Image
                   src="/testimoni/testimoni1.jpeg"
                   layout="fill"
-                  objectFit="cover"
+                  objectFit="contain"
                 />
               </div>
-              <div className="relative h-[360px] w-[400px]">
+              <div className="relative h-64 w-full">
                 <Image
                   src="/testimoni/testimoni2.jpeg"
                   layout="fill"
-                  objectFit="cover"
+                  objectFit="contain"
                 />
               </div>
-              <div className="relative h-[360px] w-[400px]">
+              <div className="relative h-64 w-full">
                 <Image
                   src="/testimoni/testimoni3.jpeg"
                   layout="fill"
-                  objectFit="cover"
+                  objectFit="contain"
                 />
               </div>
-              <div className="relative h-[360px] w-[400px]">
+              <div className="relative h-64 w-full">
                 <Image
                   src="/testimoni/testimoni4.jpeg"
                   layout="fill"
-                  objectFit="cover"
+                  objectFit="contain"
                 />
               </div>
-              <div className="relative h-[360px] w-[400px]">
+            </div>
+            <div className="flex flex-row flex-grow gap-8 w-full h-auto bg-white rounded-2xl ">
+              <div className="relative h-64 w-full">
                 <Image
                   src="/testimoni/testimoni5.jpeg"
                   layout="fill"
-                  objectFit="cover"
+                  objectFit="contain"
                 />
               </div>
-              <div className="relative h-[360px] w-[400px]">
+              <div className="relative h-64 w-full">
                 <Image
                   src="/testimoni/testimoni6.jpeg"
                   layout="fill"
-                  objectFit="cover"
+                  objectFit="contain"
+                />
+              </div>
+              <div className="relative h-64 w-full">
+                <Image
+                  src="/testimoni/testimoni7.jpeg"
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
+              <div className="relative h-64 w-full">
+                <Image
+                  src="/testimoni/testimoni8.jpeg"
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
+            </div>
+            <div className="flex flex-row flex-grow gap-8 w-full h-auto bg-white rounded-2xl ">
+              <div className="relative h-64 w-full">
+                <Image
+                  src="/testimoni/testimoni9.jpeg"
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
+              <div className="relative h-64 w-full">
+                <Image
+                  src="/testimoni/testimoni10.jpeg"
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
+              <div className="relative h-64 w-full">
+                <Image
+                  src="/testimoni/testimoni11.jpeg"
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
+              <div className="relative h-64 w-full">
+                <Image
+                  src="/testimoni/testimoni12.jpeg"
+                  layout="fill"
+                  objectFit="contain"
                 />
               </div>
             </div>
@@ -120,7 +141,7 @@ export default function Home() {
           {/* Permasalahan */}
           <selection>
             <div className="flex flex-col w-full h-auto">
-              <h1>Permasalahan</h1>
+              <h1 className="font-medium text-5xl py-4">Permasalahan</h1>
               <div className="w-full bg-white p-14">
                 <p>
                   Pernahkah membeli skincare mahal-mahal, tapi malah enggak
@@ -157,75 +178,117 @@ export default function Home() {
             </div>
           </selection>
           {/* Paket Product */}
-          <selection>Paket Product</selection>
+          <selection>
+            <div className="flex flex-col w-max h-full">
+              <div className="w-full bg-white p-14">
+                <h1 className="font-medium text-5xl py-4">Product</h1>
+                <hr className="w-full"></hr>
+                <h2 className="text-purple-500 font-medium pb-4">
+                  Umi Beauty Skincare
+                </h2>
+                <div className="flex w-full h-full">
+                  <div className="relative h-44 w-full">
+                    <Image
+                      className="rounded-md"
+                      src="/paket.jpeg"
+                      layout="fill"
+                      objectFit="cover"
+                    />
+                  </div>
+                  <p>ACNE SPOT SERUM</p>
+                </div>
+              </div>
+            </div>
+          </selection>
           {/* Manfaat */}
-          <selection>Manfaat Product</selection>
-          {/* Promo */}
-          <selection>Promo</selection>
+          <selection>
+            <div className="flex flex-col w-full h-screen">
+              <div className="w-full bg-white p-14">
+                <h1 className="font-medium text-5xl py-4">Manfaat Produk</h1>
+                <div className="w-full h-auto bg-black">ppppppppppppppp</div>
+                <div className="w-full h-auto bg-black">ppppppppppppppp</div>
+              </div>
+            </div>
+          </selection>
+
           {/* FAQ */}
           <selection>
             <div className="flex flex-col w-full h-auto">
-              <div className="w-full h-auto bg-white p-14 text-sm">
-                <h1 className="text-5xl">FAQ</h1>
-                <h2 className="text-xl">Hal yang sering ditanyakan</h2>
+              <div className="w-full h-auto bg-white p-14">
+                <h1 className="font-medium text-5xl py-4">FAQ</h1>
+                <h2 className="text-xl py-2">Hal yang sering ditanyakan</h2>
                 <p>
-                  <span>Apakah cocok untuk semua jenis Kulit?</span>
+                  <span className="text-2xl font-bold">
+                    Apakah cocok untuk semua jenis Kulit?
+                  </span>
                 </p>
-                <p>
+                <p className="py-2 text-3xl">
                   Ya, Umi Skincare cocok untuk semua jenis Kulit, bahkan yang
                   sensitif sekalipun
                 </p>
                 <hr className="w-full h-auto"></hr>
               </div>
-              <div className="w-full h-auto bg-white p-14 text-sm">
+              <div className="w-full h-auto bg-white p-14">
                 <p>
-                  <span>Kalau berjerawat, boleh enggak pakai ini?</span>
+                  <span className="text-2xl font-bold">
+                    Kalau berjerawat, boleh enggak pakai ini?
+                  </span>
                 </p>
-                <p>
+                <p className="py-2 text-3xl">
                   Untuk kulit berjerawat bisa kak. Tapi jerawat yang kecil dan
                   jerawat hormonal ya kak..
                 </p>
                 <hr className="w-full h-auto"></hr>
               </div>
-              <div className="w-full h-auto bg-white p-14 text-sm">
+              <div className="w-full h-auto bg-white p-14">
                 <p>
-                  <span>Sudah ada BPOM?</span>
+                  <span className="text-2xl font-bold">Sudah ada BPOM?</span>
                 </p>
-                <p>Sudah kak. Bisa scroll ke atas untuk nomor BPOM nya.</p>
+                <p className="py-2 text-3xl">
+                  Sudah kak. Bisa scroll ke atas untuk nomor BPOM nya.
+                </p>
                 <hr className="w-full h-auto"></hr>
               </div>
-              <div className="w-full h-auto bg-white p-14 text-sm">
+              <div className="w-full h-auto bg-white p-14">
                 <p>
-                  <span>Aman untuk Busui?</span>
+                  <span className="text-2xl font-bold">Aman untuk Busui?</span>
                 </p>
-                <p>Aman kak, untuk ibu hamil maupun menyusui.</p>
+                <p className="py-2 text-3xl">
+                  Aman kak, untuk ibu hamil maupun menyusui.
+                </p>
                 <hr className="w-full h-auto"></hr>
               </div>
-              <div className="w-full h-auto bg-white p-14 text-sm">
+              <div className="w-full h-auto bg-white p-14">
                 <p>
-                  <span>Kalau bruntusan bisa pakai ini gak?</span>
+                  <span className="text-2xl font-bold">
+                    Kalau bruntusan bisa pakai ini gak?
+                  </span>
                 </p>
-                <p>
+                <p className="py-2 text-3xl">
                   Dengan pemakaian rutin dan teratur, insya Allah Adoraly bisa
                   mengatasinya.
                 </p>
                 <hr className="w-full h-auto"></hr>
               </div>
-              <div className="w-full h-auto bg-white p-14 text-sm">
+              <div className="w-full h-auto bg-white p-14">
                 <p>
-                  <span>Untuk wajah flek sama komedo bisa pakai ini kak?</span>
+                  <span className="text-2xl font-bold">
+                    Untuk wajah flek sama komedo bisa pakai ini kak?
+                  </span>
                 </p>
-                <p>
+                <p className="py-2 text-3xl">
                   Dengan pemakaian rutin dan teratur bisa mengurangi bahkan
                   menghilangkan flek Hitam. Dan bisa untuk mengurangi komedo.
                 </p>
                 <hr className="w-full h-auto"></hr>
               </div>
-              <div className="w-full h-auto bg-white p-14 text-sm">
+              <div className="w-full h-auto bg-white p-14">
                 <p>
-                  <span>Bikin ketergantungan enggak?</span>
+                  <span className="text-2xl font-bold">
+                    Bikin ketergantungan enggak?
+                  </span>
                 </p>
-                <p>
+                <p className="py-2 text-3xl">
                   Enggak sama sekali kak. Kapanpun kakak bisa stop memakainya
                   jika dirasa Kulit Wajah sudah cukup cerah dan glowing tanpa
                   skincare.
@@ -247,7 +310,11 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           Powered by{" "}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
+          <img
+            src="umi-beauty-care.jpg"
+            alt="Vercel Logo"
+            className="h-4 ml-2"
+          />
         </a>
       </footer>
     </div>
