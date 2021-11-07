@@ -32,6 +32,7 @@ export default function Home() {
         </div>
         <div></div>
       </nav>
+      <div className="w-full h-20 bg-white"></div>
 
       <main className="flex flex-col items-center justify-center w-full text-center bg-gray-100 font-fancy">
         <div className="h-[400px] w-full text-center bg-dog-img bg-cover items-center shadow-xl">
@@ -44,10 +45,10 @@ export default function Home() {
 
         <div className="flex flex-col items-center justify-around mt-6 text-4xl max-w-2xl">
           {/* Tesimonial */}
-          <selection className="w-full shadow-2xl mt-3">
+          <selection className="w-full mt-3">
             {/* Row 1 */}
             <h1 className="font-medium text-5xl py-4">Testimonial</h1>
-            <div className="flex flex-wrap w-full h-auto bg-white rounded-2xl gap-1 justify-center">
+            <div className="flex flex-wrap w-full h-auto bg-white gap-1 justify-center shadow-lg rounded-2xl">
               <div className="relative h-96 w-[45%]">
                 <Image
                   src="/testimoni/testimoni1.jpeg"
@@ -95,9 +96,9 @@ export default function Home() {
             </div>
           </selection>
           {/* Permasalahan */}
-          <selection className="shadow-2xl mt-3">
-            <div className="flex flex-col w-full h-auto">
-              <div className="w-full bg-white p-14">
+          <selection className="w-full mt-3 shadow-lg rounded-2xl">
+            <div className="flex flex-col w-full h-auto bg-white shadow-lg rounded-2xl">
+              <div className="w-full p-14">
                 <h1 className="font-medium text-5xl py-4">Permasalahannya</h1>
                 <p className="text-lg">
                   Pernahkah membeli skincare mahal-mahal, tapi malah enggak
@@ -111,10 +112,9 @@ export default function Home() {
             </div>
           </selection>
           {/* Mempersembahkan */}
-          <selection className="shadow-2xl mt-3">
-            <hr className="w-full"></hr>
+          <selection className="w-full mt-3 bg-white shadow-lg rounded-2xl">
             <div className="flex flex-col w-full h-auto">
-              <div className="w-full bg-white p-14">
+              <div className="w-full p-14">
                 <h1>Mempersembahkan</h1>
                 <h2 className="text-purple-500 font-medium pb-4">
                   Umi Beauty Skincare
@@ -136,9 +136,8 @@ export default function Home() {
             </div>
           </selection>
           {/* Paket Product */}
-          <selection className="shadow-2xl w-full mt-3">
-            <h1 className="font-medium text-5xl py-4">Mempersembahkan</h1>
-            <div className="flex flex-col w-auto h-auto bg-white p-6">
+          <selection className="w-full mt-3">
+            <div className="flex flex-col w-auto h-auto bg-white p-6 shadow-lg rounded-2xl">
               <h2 className="text-purple-500 font-medium pb-4">
                 Umi Beauty Skincare
               </h2>
@@ -170,9 +169,9 @@ export default function Home() {
             </div>
           </selection>
           {/* Manfaat */}
-          <selection className="shadow-2xl mt-3">
+          <selection className="mt-3">
             <div className="flex flex-col w-full h-auto">
-              <div className="w-full h-auto bg-white p-14 text-lg">
+              <div className="w-full h-auto bg-white p-14 text-lg shadow-lg rounded-2xl">
                 <h1 className="font-medium text-5xl py-4">Kandungan Produk</h1>
                 <p className="font-medium text-xl">Umi Beauty Care Acne Spot</p>
                 <p>
@@ -206,8 +205,8 @@ export default function Home() {
             </div>
           </selection>
           {/* Cara Pakai */}
-          <selection className="shadow-2xl mt-3">
-            <div className="flex flex-col w-full h-auto p-24 bg-white">
+          <selection className="mt-3">
+            <div className="flex flex-col w-full h-auto p-24 bg-white shadow-lg rounded-2xl">
               <h1 className="font-medium text-5xl py-4">Cara Pemakaian</h1>
               <p className="text-left">
                 1.Teteskan 2-3 tetes serum, usap dan pijat secara perlahan
