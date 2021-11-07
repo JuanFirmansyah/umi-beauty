@@ -33,9 +33,9 @@ export default function Home() {
         <div></div>
       </nav>
 
-      <main className="flex flex-col items-center justify-center w-full text-center bg-gray-100">
-        <div className="h-[600px] w-full text-center bg-dog-img bg-cover items-center shadow-xl">
-          <div className="w-full h-full justify-center mt-[25%]">
+      <main className="flex flex-col items-center justify-center w-full text-center bg-gray-100 font-fancy">
+        <div className="h-[400px] w-full text-center bg-dog-img bg-cover items-center shadow-xl">
+          <div className="w-full h-full justify-center mt-[13%]">
             <p className="text-4xl text-white leading-relaxed font-medium bg-gray-600 rounded-2xl p-8 bg-opacity-30 max-w-2xl m-auto">
               Rahasia Kulit Wajah Mulus dan Glowing Sampai Lanjut Usia
             </p>
@@ -44,108 +44,66 @@ export default function Home() {
 
         <div className="flex flex-col items-center justify-around mt-6 text-4xl max-w-2xl">
           {/* Tesimonial */}
-          <selection className="w-full">
-            <h1 className="font-medium text-5xl py-4">Testimonial</h1>
+          <selection className="w-full shadow-2xl mt-3">
             {/* Row 1 */}
-            <div className="flex flex-row flex-grow gap-4 w-full h-auto bg-white rounded-2xl ">
-              <div className="relative h-64 w-full">
+            <h1 className="font-medium text-5xl py-4">Testimonial</h1>
+            <div className="flex flex-wrap w-full h-auto bg-white rounded-2xl gap-1 justify-center">
+              <div className="relative h-96 w-[45%]">
                 <Image
                   src="/testimoni/testimoni1.jpeg"
                   layout="fill"
-                  objectFit="contain"
+                  objectFit="cover"
                 />
               </div>
-              <div className="relative h-64 w-full">
+              <div className="relative h-96 w-[45%]">
                 <Image
                   src="/testimoni/testimoni2.jpeg"
                   layout="fill"
-                  objectFit="contain"
+                  objectFit="cover"
                 />
               </div>
-              <div className="relative h-64 w-full">
+
+              <div className="relative h-96 w-[45%]">
                 <Image
                   src="/testimoni/testimoni3.jpeg"
                   layout="fill"
-                  objectFit="contain"
+                  objectFit="cover"
                 />
               </div>
-              <div className="relative h-64 w-full">
+              <div className="relative h-96 w-[45%]">
                 <Image
                   src="/testimoni/testimoni4.jpeg"
                   layout="fill"
-                  objectFit="contain"
+                  objectFit="cover"
                 />
               </div>
-            </div>
-            <div className="flex flex-row flex-grow gap-8 w-full h-auto bg-white rounded-2xl ">
-              <div className="relative h-64 w-full">
+
+              <div className="relative h-96 w-[45%]">
                 <Image
                   src="/testimoni/testimoni5.jpeg"
                   layout="fill"
-                  objectFit="contain"
+                  objectFit="cover"
                 />
               </div>
-              <div className="relative h-64 w-full">
-                <Image
-                  src="/testimoni/testimoni6.jpeg"
-                  layout="fill"
-                  objectFit="contain"
-                />
-              </div>
-              <div className="relative h-64 w-full">
+              <div className="relative h-96 w-[45%]">
                 <Image
                   src="/testimoni/testimoni7.jpeg"
                   layout="fill"
-                  objectFit="contain"
-                />
-              </div>
-              <div className="relative h-64 w-full">
-                <Image
-                  src="/testimoni/testimoni8.jpeg"
-                  layout="fill"
-                  objectFit="contain"
-                />
-              </div>
-            </div>
-            <div className="flex flex-row flex-grow gap-8 w-full h-auto bg-white rounded-2xl ">
-              <div className="relative h-64 w-full">
-                <Image
-                  src="/testimoni/testimoni9.jpeg"
-                  layout="fill"
-                  objectFit="contain"
-                />
-              </div>
-              <div className="relative h-64 w-full">
-                <Image
-                  src="/testimoni/testimoni10.jpeg"
-                  layout="fill"
-                  objectFit="contain"
-                />
-              </div>
-              <div className="relative h-64 w-full">
-                <Image
-                  src="/testimoni/testimoni11.jpeg"
-                  layout="fill"
-                  objectFit="contain"
-                />
-              </div>
-              <div className="relative h-64 w-full">
-                <Image
-                  src="/testimoni/testimoni12.jpeg"
-                  layout="fill"
-                  objectFit="contain"
+                  objectFit="cover"
                 />
               </div>
             </div>
           </selection>
           {/* Permasalahan */}
-          <selection>
+          <selection className="shadow-2xl mt-3">
             <div className="flex flex-col w-full h-auto">
-              <h1 className="font-medium text-5xl py-4">Permasalahan</h1>
               <div className="w-full bg-white p-14">
-                <p>
+                <h1 className="font-medium text-5xl py-4">Permasalahannya</h1>
+                <p className="text-lg">
                   Pernahkah membeli skincare mahal-mahal, tapi malah enggak
                   cocok dan membuat wajah banyak jerawat dan bikin gak pede?
+                </p>
+                <p className="text-lg mt-8">
                   Banyak faktor yang menyebabkannya. Salah satu penyebabnya
                   yaitu Kualitas Produk Skincare itu sendiri.
                 </p>
@@ -153,7 +111,7 @@ export default function Home() {
             </div>
           </selection>
           {/* Mempersembahkan */}
-          <selection>
+          <selection className="shadow-2xl mt-3">
             <hr className="w-full"></hr>
             <div className="flex flex-col w-full h-auto">
               <div className="w-full bg-white p-14">
@@ -178,41 +136,93 @@ export default function Home() {
             </div>
           </selection>
           {/* Paket Product */}
-          <selection>
-            <div className="flex flex-col w-max h-full">
-              <div className="w-full bg-white p-14">
-                <h1 className="font-medium text-5xl py-4">Product</h1>
-                <hr className="w-full"></hr>
-                <h2 className="text-purple-500 font-medium pb-4">
-                  Umi Beauty Skincare
-                </h2>
-                <div className="flex w-full h-full">
-                  <div className="relative h-44 w-full">
-                    <Image
-                      className="rounded-md"
-                      src="/paket.jpeg"
-                      layout="fill"
-                      objectFit="cover"
-                    />
-                  </div>
-                  <p>ACNE SPOT SERUM</p>
+          <selection className="shadow-2xl w-full mt-3">
+            <h1 className="font-medium text-5xl py-4">Mempersembahkan</h1>
+            <div className="flex flex-col w-auto h-auto bg-white p-6">
+              <h2 className="text-purple-500 font-medium pb-4">
+                Umi Beauty Skincare
+              </h2>
+              <div className="flex flex-col w-full h-full">
+                <div className="relative h-96 w-full">
+                  <Image
+                    className="rounded-md"
+                    src="/paket.jpeg"
+                    layout="fill"
+                    objectFit="contain"
+                  />
                 </div>
+                <span className="font-medium">ACNE SPOT SERUM</span>
+              </div>
+              <div className="flex flex-wrap w-full h-auto justify-center mt-4">
+                <div className="w-[45%] h-20 border-2 m-2 rounded-lg"></div>
+                <div className="w-[45%] h-20 border-2 m-2 rounded-lg"></div>
+                <div className="w-[45%] h-20 border-2 m-2 rounded-lg"></div>
+                <div className="w-[45%] h-20 border-2 m-2 rounded-lg"></div>
+                <div className="w-[45%] h-20 border-2 m-2 rounded-lg"></div>
+                <div className="w-[45%] h-20 border-2 m-2 rounded-lg"></div>
+                <div className="w-[45%] h-20 border-2 m-2 rounded-lg"></div>
+                <div className="w-[45%] h-20 border-2 m-2 rounded-lg"></div>
+                <div className="w-[45%] h-20 border-2 m-2 rounded-lg"></div>
+                <div className="w-[45%] h-20 border-2 m-2 rounded-lg"></div>
+                <div className="w-[45%] h-20 border-2 m-2 rounded-lg"></div>
+                <div className="w-[45%] h-20 border-2 m-2 rounded-lg"></div>
               </div>
             </div>
           </selection>
           {/* Manfaat */}
-          <selection>
-            <div className="flex flex-col w-full h-screen">
-              <div className="w-full bg-white p-14">
-                <h1 className="font-medium text-5xl py-4">Manfaat Produk</h1>
-                <div className="w-full h-auto bg-black">ppppppppppppppp</div>
-                <div className="w-full h-auto bg-black">ppppppppppppppp</div>
+          <selection className="shadow-2xl mt-3">
+            <div className="flex flex-col w-full h-auto">
+              <div className="w-full h-auto bg-white p-14 text-lg">
+                <h1 className="font-medium text-5xl py-4">Kandungan Produk</h1>
+                <p className="font-medium text-xl">Umi Beauty Care Acne Spot</p>
+                <p>
+                  Serum 20 ML Di dalam Acne Serum terdapat kandungan Xanthan
+                  gum, Allantoin, Salicylic Acid, Alcohol, Propanediol, Maclura
+                  Cochinchin-Ensis Leaf Prenylflavonoids, Niacinamide, Disodium
+                  EDTA, Propylene Glycol, Glycerin, DMDM Hydantoin, Peg-40
+                  Hydrogenated Castor Oil, Fragrance, C 19140, Aqua yang dimana
+                  bermanfaat sebagai :
+                </p>
+                <p>
+                  1. Membantu menyembuhkan jerawat meradang, jerawat batu,
+                  beruntusan, kulit kemerahan dan iritasi.
+                </p>
+                <p>
+                  2. Membantu meregenerasi dan menjaga kulit yang sensitive
+                  tanpa menimbulkan iritasi.
+                </p>
+                <p>
+                  3. Membantu menenangkan kulit, menghaluskan dan juga membantu
+                  memudarkan bekas jerawat atau luka.
+                </p>
+                <p>
+                  4. Membantu mencerahkan kulit secara aman karena menggunakan
+                  Maclura Cochinchin-Ensis Leaf Prenylflavonoids dan Vitamin C
+                  yang juga berfungsi sebagai anti oxidant + anti pollution.
+                </p>
+                <p>5. Membantu mengontrol kadar minyak berlebih di kulit.</p>
+                <p>6. Menghilangkan flek di wajah.</p>
               </div>
+            </div>
+          </selection>
+          {/* Cara Pakai */}
+          <selection className="shadow-2xl mt-3">
+            <div className="flex flex-col w-full h-auto p-24 bg-white">
+              <h1 className="font-medium text-5xl py-4">Cara Pemakaian</h1>
+              <p className="text-left">
+                1.Teteskan 2-3 tetes serum, usap dan pijat secara perlahan
+                sampai merata pada kulit wajah.
+              </p>
+              <p className="text-left py-3">
+                2.Diamkan setengah jam agar serum meresap ke kulit. Info Order &
+                Join Stockist, Distributor, Agen & Reseller. 0852-8000-1456
+                (Master Stockist Pulau Jawa & Bali)
+              </p>
             </div>
           </selection>
 
           {/* FAQ */}
-          <selection>
+          <selection className="shadow-2xl mt-3">
             <div className="flex flex-col w-full h-auto">
               <div className="w-full h-auto bg-white p-14">
                 <h1 className="font-medium text-5xl py-4">FAQ</h1>
