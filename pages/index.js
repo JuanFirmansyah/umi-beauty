@@ -1,8 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
 import React from "react";
+import { useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen overflow-x-hidden">
       <Head>
@@ -10,8 +14,8 @@ export default function Home() {
         <link rel="icon" href="/umi-beauty-care.jpg" />
       </Head>
 
-      <nav className="flex top-0 w-full h-16 justify-between items-center px-10 border-b-4">
-        <div>
+      <nav className="flex top-0 w-full h-16 justify-between items-center px-10">
+        <button onClick={() => setIsOpen(!isOpen)}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"
@@ -26,13 +30,29 @@ export default function Home() {
               d="M4 6h16M4 12h16M4 18h7"
             />
           </svg>
-        </div>
+        </button>
         <div className="relative h-14 w-20">
           <Image src="/umi-beauty-care.jpg" layout="fill" objectFit="cover" />
         </div>
         <div></div>
       </nav>
-      <div className="w-full h-20 bg-white"></div>
+      <div
+        className={`${
+          isOpen ? "block" : "hidden"
+        } flex flex-row w-full h-32 bg-white text-center`}
+      >
+        <div className="flex w-full h-full text-lg font-medium">
+          <Link href="/umi-beauty">
+            <a className="w-full px-8 py-10">Umi Beauty Skincare</a>
+          </Link>
+          <Link href="/contact">
+            <a className="w-full px-8 py-10">Contact</a>
+          </Link>
+          <Link href="/about">
+            <a className="w-full px-8 py-10">About</a>
+          </Link>
+        </div>
+      </div>
 
       <main className="flex flex-col items-center justify-center w-full text-center bg-gray-100 font-fancy">
         <div className="h-[400px] w-full text-center bg-dog-img bg-cover items-center shadow-xl">
@@ -137,20 +157,22 @@ export default function Home() {
           </selection>
           {/* Paket Product */}
           <selection className="w-full mt-3">
-            <div className="flex flex-col w-auto h-auto bg-white p-6 shadow-lg rounded-2xl">
+            <div className="flex flex-col w-auto h-auto bg-white p-6 shadow-lg rounded-2xl justify-center">
               <h2 className="text-purple-500 font-medium pb-4">
                 Umi Beauty Skincare
               </h2>
               <div className="flex flex-col w-full h-full">
-                <div className="relative h-96 w-full">
-                  <Image
-                    className="rounded-md"
-                    src="/paket.jpeg"
-                    layout="fill"
-                    objectFit="contain"
-                  />
+                <div className="flex h-96 w-auto justify-center">
+                  <div className="relative h-96 w-[45%]">
+                    <Image
+                      className="rounded-md"
+                      src="/paket.jpeg"
+                      layout="fill"
+                      objectFit="cover"
+                    />
+                  </div>
                 </div>
-                <span className="font-medium">ACNE SPOT SERUM</span>
+                <span className="font-medium py-6">ACNE SPOT SERUM</span>
               </div>
               <div className="flex flex-wrap w-full h-auto justify-center mt-4">
                 <div className="w-[45%] h-20 border-2 m-2 rounded-lg"></div>
@@ -206,7 +228,7 @@ export default function Home() {
           </selection>
           {/* Cara Pakai */}
           <selection className="mt-3">
-            <div className="flex flex-col w-full h-auto p-24 bg-white shadow-lg rounded-2xl">
+            <div className="flex flex-col w-full h-auto p-24 bg-white shadow-lg rounded-2xl text-lg">
               <h1 className="font-medium text-5xl py-4">Cara Pemakaian</h1>
               <p className="text-left">
                 1.Teteskan 2-3 tetes serum, usap dan pijat secara perlahan
