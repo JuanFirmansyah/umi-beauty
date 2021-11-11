@@ -76,7 +76,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-around mt-6 text-4xl max-w-sm">
+        <div className="flex flex-col items-center justify-around mt-6 text-4xl max-w-sm md:max-w-2xl">
           {/* Mempersembahkan */}
           <selection className="w-full mt-3 bg-white shadow-lg rounded-2xl">
             <div className="flex flex-col w-full h-auto">
