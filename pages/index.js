@@ -76,7 +76,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-around mt-6 text-4xl max-w-md">
+        <div className="flex flex-col items-center justify-around mt-6 text-4xl max-w-sm">
           {/* Mempersembahkan */}
           <selection className="w-full mt-3 bg-white shadow-lg rounded-2xl">
             <div className="flex flex-col w-full h-auto">
@@ -156,8 +156,8 @@ export default function Home() {
           {/* Permasalahan */}
           <selection className="w-full mt-3 shadow-lg rounded-2xl">
             <div className="flex flex-col w-full h-auto bg-red-600 shadow-lg rounded-2xl text-white drop-shadow-md">
-              <div className="w-full px-14 pb-14 pt-3">
-                <h1 className="font-medium text-5xl py-4">Permasalahannya</h1>
+              <div className="w-full px-12 pb-14 pt-3">
+                <h1 className="font-medium text-4xl py-4">Permasalahannya</h1>
                 <p className="text-lg">
                   Pernahkah membeli skincare mahal-mahal, tapi malah enggak
                   cocok dan membuat wajah banyak jerawat dan bikin gak pede?
