@@ -14,7 +14,7 @@ export default function Home() {
         <link rel="icon" href="/umi-beauty-care.jpg" />
       </Head>
 
-      <nav className="flex top-0 w-full h-20 justify-between items-center px-10">
+      <nav className="flex z-20 top-0 w-full h-20 justify-between items-center px-10 bg-white">
         <button onClick={() => setIsOpen(!isOpen)}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -38,22 +38,22 @@ export default function Home() {
       </nav>
       <div
         className={`${
-          isOpen ? "block" : "hidden"
-        } flex flex-row w-full h-32 bg-white text-center transition-all ease-in`}
+          isOpen ? "block" : "-translate-y-full text-white"
+        } absolute top-0 z-10 flex flex-row w-full h-64 bg-white text-center transition-all ease-in duration-1000`}
       >
         <div className="flex w-full h-full text-lg font-medium items-center">
           <Link href="/umi-beauty">
-            <a className="w-full px-8 py-10 hover:bg-pink-400 hover:text-white">
+            <a className="w-full h-full px-8 py-32 hover:bg-pink-400 hover:text-white tracking-normal">
               Umi Beauty Skincare
             </a>
           </Link>
           <Link href="/contact">
-            <a className="w-full px-8 py-10 hover:bg-pink-400 hover:text-white">
+            <a className="w-full h-full px-8 py-32 hover:bg-pink-400 hover:text-white tracking-wider">
               Contact
             </a>
           </Link>
           <Link href="/about">
-            <a className="w-full px-8 py-10 hover:bg-pink-400 hover:text-white">
+            <a className="w-full h-full px-8 py-32 hover:bg-pink-400 hover:text-white tracking-wider">
               About
             </a>
           </Link>
@@ -76,7 +76,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-around mt-6 text-4xl max-w-2xl">
+        <div className="flex flex-col items-center justify-around mt-6 text-4xl max-w-md">
           {/* Mempersembahkan */}
           <selection className="w-full mt-3 bg-white shadow-lg rounded-2xl">
             <div className="flex flex-col w-full h-auto">
@@ -173,7 +173,7 @@ export default function Home() {
           {/* Paket Product */}
           <selection className="w-full mt-3">
             <div className="flex flex-col w-auto h-auto bg-white p-6 shadow-lg rounded-2xl justify-center">
-              <h2 className="text-purple-500 font-medium pb-4">
+              <h2 className="text-white font-medium py-4 mx-3 bg-pink-400 rounded-2xl">
                 Umi Beauty Skincare
               </h2>
               <div className="flex flex-col w-full h-full">
@@ -189,50 +189,50 @@ export default function Home() {
                 </div>
                 <span className="font-medium py-6">ACNE SPOT SERUM</span>
               </div>
-              <div className="flex flex-wrap w-full h-auto justify-center mt-4 text-base">
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400 text-white">
+              <div className="flex flex-wrap w-full h-auto justify-center mt-4 text-base text-white font-medium">
+                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400">
                   <p>Kulit putih alami</p>
                 </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400 text-white">
+                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400">
                   <p>Glowing, cerah merata</p>
                 </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400 text-white">
+                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400">
                   <p>Menghilangkan bruntusan</p>
                 </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400 text-white">
+                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400">
                   <p>Menghilangkan pori-pori besar</p>
                 </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400 text-white">
+                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400">
                   <p>Anti penuaan dini</p>
                 </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400 text-white">
+                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400">
                   <p>Untuk semua jenis kulit</p>
                 </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400 text-white">
+                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400">
                   <p>Menghilangkan bekas bopeng</p>
                 </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400 text-white">
+                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400">
                   <p>Aman buat Bumil dan Busui</p>
                 </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400 text-white">
+                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400">
                   <p>Bisa digunakan untuk umur 13 Tahun keatas</p>
                 </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400 text-white">
+                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400">
                   <p>Mencerahkan kulit wajah yang kusam</p>
                 </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400 text-white">
+                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400">
                   <p>Membuat wajah glow up</p>
                 </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400 text-white">
+                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400">
                   <p>
                     Membantu menghilangkan jerawat bahkan jerawat batu dan bekas
                     jerawat
                   </p>
                 </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400 text-white">
+                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400">
                   <p>Bintik hitam/flek membandel pada kulit wajah</p>
                 </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400 text-white">
+                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400">
                   <p>
                     Membantu menghilangkan jerawat bahkan jerawat batu dan bekas
                     jerawat
