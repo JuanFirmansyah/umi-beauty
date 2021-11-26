@@ -3,9 +3,26 @@ import Image from "next/image";
 import React from "react";
 import { useState } from "react";
 import Link from "next/link";
+import { Swiper, SwiperSlide } from "swiper/react";
+import {
+  Navigation,
+  Pagination,
+  A11y,
+  Controller,
+  Autoplay,
+  EffectCoverflow,
+} from "swiper";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
+import "swiper/css/controller";
+import "swiper/css/effect-coverflow";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
+  const [controlledSwiper, setControlledSwiper] = useState(null);
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen overflow-x-hidden">
@@ -14,7 +31,7 @@ export default function Home() {
         <link rel="icon" href="/umi-beauty-care.jpg" />
       </Head>
 
-      <nav className="flex z-20 top-0 w-full h-20 justify-between items-center px-10 bg-white">
+      <nav className="flex fixed z-20 top-0 w-full h-20 justify-between items-center px-10 bg-white">
         <button onClick={() => setIsOpen(!isOpen)}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +56,7 @@ export default function Home() {
       <div
         className={`${
           isOpen ? "block" : "-translate-y-full text-white"
-        } absolute top-0 z-10 flex flex-row w-full h-64 bg-white text-center transition-all ease-in duration-1000`}
+        } flex fixed top-0 z-10 flex-row w-full h-64 bg-white text-center transition-all ease-in duration-1000`}
       >
         <div className="flex w-full h-full text-lg font-medium items-center">
           <Link href="/umi-beauty">
@@ -60,21 +77,88 @@ export default function Home() {
         </div>
       </div>
 
-      <main className="flex flex-col items-center justify-center w-full text-center bg-gray-100 font-fancy">
-        <div className="h-[400px] w-full text-center bg-dog-img bg-cover items-center shadow-xl">
-          <div className="w-full h-full justify-center">
-            <p className="text-xl text-black leading-relaxed font-medium p-8 bg-opacity-30 max-w-2xl m-auto">
-              Umi Beauty Skincare
-            </p>
-            <p className="text-xl text-black leading-relaxed font-medium bg-opacity-30 max-w-2xl m-auto">
-              Bisa Bayar di tempat{" "}
-              <span className="text-pink-600">COD Jabodetabek</span>
-            </p>
-            <p className="text-4xl text-white drop-shadow-xl leading-relaxed font-medium bg-opacity-30 pt-8 max-w-2xl m-auto">
-              Rahasia Kulit Wajah Mulus dan Glowing Sampai Lanjut Usia
-            </p>
-          </div>
-        </div>
+      <main className="flex flex-col items-center justify-center w-full text-center bg-gray-100 font-fancy mt-20">
+        <Swiper
+          className="flex h-screen w-full"
+          modules={[
+            Navigation,
+            Pagination,
+            A11y,
+            Controller,
+            Autoplay,
+            EffectCoverflow,
+          ]}
+          autoplay={true}
+          navigation
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+          loop={true}
+          slidesPerView={1}
+          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => console.log(swiper)}
+        >
+          <SwiperSlide className="w-full text-center bg-bg-1 bg-cover items-center justify-center">
+            <div className="flex bg-gradient-to-b from-pink-400 via-pink-400 h-screen w-full items-center justify-center">
+              <div className="w-full h-full justify-center">
+                <p className="text-xl text-white leading-relaxed font-medium p-8 bg-opacity-30 max-w-2xl m-auto">
+                  Umi Beauty Skincare
+                </p>
+                <p className="text-xl text-white leading-relaxed font-medium bg-opacity-30 max-w-2xl m-auto">
+                  Bisa Bayar di tempat{" "}
+                  <span className="text-pink-600">COD Jabodetabek</span>
+                </p>
+                <p className="text-4xl text-white drop-shadow-xl leading-relaxed font-medium bg-opacity-30 pt-8 max-w-2xl m-auto">
+                  Rahasia Kulit Wajah Mulus dan Glowing Sampai Lanjut Usia
+                </p>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className="w-full text-center bg-bg-1 bg-cover items-center">
+            <div className="bg-gradient-to-b from-pink-400 via-pink-400 h-full w-full">
+              <div className="w-full h-full justify-center pt-40">
+                <p className="text-4xl text-white drop-shadow-xl leading-relaxed font-medium bg-opacity-30 pt-8 max-w-2xl m-auto">
+                  Kunjungi Official Store kami
+                </p>
+                <div className="flex w-32 m-auto">
+                  <button className="flex h-12 w-12 items-center m-auto justify-center rounded-xl border-2 border-white hover:bg-white transition-all delay-100 ease-in-out mt-4">
+                    <div className="relative h-10 w-10">
+                      <Image
+                        src="/images/shopee.png"
+                        layout="fill"
+                        objectFit="contain"
+                      />
+                    </div>
+                  </button>
+                  <button className="flex h-12 w-12 items-center m-auto justify-center rounded-xl border-2 border-white hover:bg-white transition-all delay-100 ease-in-out mt-4">
+                    <div className="relative h-10 w-10">
+                      <Image
+                        src="/images/shopee.png"
+                        layout="fill"
+                        objectFit="contain"
+                      />
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className="w-full text-center bg-bg-1 bg-cover items-center">
+            <div className="bg-gradient-to-b from-pink-400 via-pink-400 h-full w-full">
+              <div className="w-full h-full justify-center">
+                <p className="text-xl text-black leading-relaxed font-medium p-8 bg-opacity-30 max-w-2xl m-auto">
+                  Umi Beauty Skincare
+                </p>
+                <p className="text-xl text-black leading-relaxed font-medium bg-opacity-30 max-w-2xl m-auto">
+                  Bisa Bayar di tempat{" "}
+                  <span className="text-pink-600">COD Jabodetabek</span>
+                </p>
+                <p className="text-4xl text-white drop-shadow-xl leading-relaxed font-medium bg-opacity-30 pt-8 max-w-2xl m-auto">
+                  Rahasia Kulit Wajah Mulus dan Glowing Sampai Lanjut Usia
+                </p>
+              </div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
 
         <div className="flex flex-col items-center justify-around mt-6 text-4xl max-w-sm md:max-w-2xl">
           {/* Mempersembahkan */}
