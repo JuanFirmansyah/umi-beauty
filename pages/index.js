@@ -19,6 +19,7 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import "swiper/css/controller";
 import "swiper/css/effect-coverflow";
+import Paket from "../components/Paket";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -56,22 +57,22 @@ export default function Home() {
       <div
         className={`${
           isOpen ? "block" : "-translate-y-full text-white"
-        } flex fixed top-0 z-10 flex-row w-full h-64 bg-white text-center transition-all ease-in duration-1000`}
+        } flex fixed flex-grow flex-wrap top-20 z-10 w-full h-40 bg-white text-center transition-all ease-in duration-1000`}
       >
-        <div className="flex w-full h-full text-lg font-medium items-center">
+        <div className="flex w-full h-20">
           <Link href="/umi-beauty">
             <a className="w-full h-full px-8 py-32 hover:bg-pink-400 hover:text-white tracking-normal">
               Umi Beauty Skincare
             </a>
           </Link>
-          <Link href="/contact">
+          <Link href="/testimonial">
             <a className="w-full h-full px-8 py-32 hover:bg-pink-400 hover:text-white tracking-wider">
-              Contact
+              Testimonial
             </a>
           </Link>
-          <Link href="/about">
+          <Link href="/pesan">
             <a className="w-full h-full px-8 py-32 hover:bg-pink-400 hover:text-white tracking-wider">
-              About
+              Pesan
             </a>
           </Link>
         </div>
@@ -161,16 +162,30 @@ export default function Home() {
         </Swiper>
 
         <div className="flex flex-col items-center justify-around mt-6 text-4xl max-w-sm md:max-w-2xl">
-          {/* Mempersembahkan */}
+          {/* Jenis Paket */}
+          <Paket />
+
+          {/* Tentang Produk */}
+          <selection className="flex flex-col w-full h-auto mt-6 ">
+            <p className="font-medium text-4xl">Tentang Produk</p>
+            <div className="flex w-full h-60 justify-between mt-8">
+              <div className="w-[45%] h-auto px-14 pb-14 pt-8 bg-white shadow-lg rounded-2xl"></div>
+              <div className="w-[45%] h-auto px-14 pb-14 pt-8 bg-white shadow-lg rounded-2xl"></div>
+            </div>
+            <div className="flex w-full h-60 justify-between mt-3">
+              <div className="w-[45%] h-auto px-14 pb-14 pt-8 bg-white shadow-lg rounded-2xl"></div>
+              <div className="w-[45%] h-auto px-14 pb-14 pt-8 bg-white shadow-lg rounded-2xl"></div>
+            </div>
+          </selection>
           <selection className="w-full mt-3 bg-white shadow-lg rounded-2xl">
             <div className="flex flex-col w-full h-auto">
-              <div className="w-full px-14 pb-14 pt-8 text-left">
-                <h1 className="">Mempersembahkan</h1>
-                <h2 className="text-purple-500 font-medium my-2">
+              <div className="w-full px-8 pb-14 pt-8 text-left">
+                <h1 className="font-medium text-4xl">Mempersembahkan</h1>
+                <h2 className="text-purple-500 font-medium text-3xl my-2">
                   Umi Beauty Skincare
                 </h2>
-                <hr className="w-full h-2 bg-black color rounded-full"></hr>
-                <p className="text-pink-500 font-medium py-8 text-4xl">
+                <hr className="w-full h-1 bg-black color rounded-full"></hr>
+                <p className="text-pink-500 font-medium py-8 text-2xl">
                   Umi Beauty Skincare memberikan solusi untuk Kamu yang ingin
                   segera memiliki Wajah Sehat, Mulus, Glowing dan Cerah Merona
                   secara Mudah dan pastinya AMAN.
@@ -189,7 +204,7 @@ export default function Home() {
           {/* Tesimonial */}
           <selection className="w-full mt-3">
             {/* Row 1 */}
-            <h1 className="font-medium text-5xl my-4">Testimonial</h1>
+            <h1 className="font-medium text-4xl my-4">Testimonial</h1>
             <div className="flex flex-wrap w-full h-auto bg-white gap-1 justify-center shadow-lg rounded-2xl py-4">
               <div className="relative h-96 w-[45%]">
                 <Image
@@ -210,7 +225,7 @@ export default function Home() {
                 <Image
                   src="/testimoni/testimoni3.jpeg"
                   layout="fill"
-                  objectFit="cover"
+                  objectFit="contao"
                 />
               </div>
               <div className="relative h-96 w-[45%]">
@@ -257,7 +272,7 @@ export default function Home() {
           {/* Paket Product */}
           <selection className="w-full mt-3">
             <div className="flex flex-col w-auto h-auto bg-white p-6 shadow-lg rounded-2xl justify-center">
-              <h2 className="text-white font-medium py-4 mx-3 bg-pink-400 rounded-2xl">
+              <h2 className="text-white font-medium text-4xl py-4 mx-3 bg-pink-400 rounded-2xl">
                 Umi Beauty Skincare
               </h2>
               <div className="flex flex-col w-full h-full">
@@ -271,7 +286,9 @@ export default function Home() {
                     />
                   </div>
                 </div>
-                <span className="font-medium py-6">ACNE SPOT SERUM</span>
+                <span className="font-medium text-3xl py-6">
+                  ACNE SPOT SERUM
+                </span>
               </div>
               <div className="flex flex-wrap w-full h-auto justify-center mt-4 text-base text-white font-medium">
                 <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400">
