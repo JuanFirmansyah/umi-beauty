@@ -1,9 +1,9 @@
-import Head from "next/head";
-import Image from "next/image";
-import React from "react";
-import { useState } from "react";
-import Link from "next/link";
-import { Swiper, SwiperSlide } from "swiper/react";
+import Head from 'next/head';
+import Image from 'next/image';
+import React from 'react';
+import { useState } from 'react';
+import Link from 'next/link';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import {
   Navigation,
   Pagination,
@@ -11,28 +11,33 @@ import {
   Controller,
   Autoplay,
   EffectCoverflow,
-} from "swiper";
+} from 'swiper';
 
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/autoplay";
-import "swiper/css/controller";
-import "swiper/css/effect-coverflow";
-import Paket from "../components/Paket";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
+import 'swiper/css/controller';
+import 'swiper/css/effect-coverflow';
+import Paket from '../components/Paket';
+import Tentang from '../components/Tentang';
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
   const [controlledSwiper, setControlledSwiper] = useState(null);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen overflow-x-hidden">
+    <div className="flex flex-col items-center justify-center min-h-screen overflow-x-hidden font-body">
       <Head>
-        <title>Create Next App</title>
+        <title>Umi Beauty Care || Solusi kecantikanmu</title>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet"
+        />
         <link rel="icon" href="/umi-beauty-care.jpg" />
       </Head>
 
-      <nav className="flex fixed z-20 top-0 w-full h-20 justify-between items-center px-10 bg-white">
+      <nav className="flex fixed z-20 top-0 w-full h-20 justify-center items-center bg-white gap-32">
         <button onClick={() => setIsOpen(!isOpen)}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -56,29 +61,31 @@ export default function Home() {
       </nav>
       <div
         className={`${
-          isOpen ? "block" : "-translate-y-full text-white"
-        } flex fixed flex-grow flex-wrap top-20 z-10 w-full h-40 bg-white text-center transition-all ease-in duration-1000`}
+          isOpen ? 'block' : '-translate-y-full text-white'
+        } flex fixed top-20 z-10 w-full  transition-all ease-in duration-1000`}
       >
-        <div className="flex w-full h-20">
-          <Link href="/umi-beauty">
-            <a className="w-full h-full px-8 py-32 hover:bg-pink-400 hover:text-white tracking-normal">
-              Umi Beauty Skincare
-            </a>
-          </Link>
-          <Link href="/testimonial">
-            <a className="w-full h-full px-8 py-32 hover:bg-pink-400 hover:text-white tracking-wider">
-              Testimonial
-            </a>
-          </Link>
-          <Link href="/pesan">
-            <a className="w-full h-full px-8 py-32 hover:bg-pink-400 hover:text-white tracking-wider">
-              Pesan
-            </a>
-          </Link>
+        <div className="flex w-full h-40 bg-white text-center items-center justify-center">
+          <div className="w-full h-full hover:bg-pink-300">
+            <Link href="/">
+              <a className=" tracking-normal">Umi Beauty Skincare</a>
+            </Link>
+          </div>
+          <div className="w-full h-full hover:bg-pink-300">
+            <Link href="/testimonial">
+              <a className="h-full tra1cking-wider bg-green-200 block">
+                Testimonial
+              </a>
+            </Link>
+          </div>
+          <div className="w-full h-full hover:bg-pink-300">
+            <Link href="/pesan">
+              <a className="w-full h-full tracking-wider">Pesan</a>
+            </Link>
+          </div>
         </div>
       </div>
 
-      <main className="flex flex-col items-center justify-center w-full text-center bg-gray-100 font-fancy mt-20">
+      <main className="flex flex-col items-center justify-center max-w-sm text-center bg-gray-100 font-fancy mt-20">
         <Swiper
           className="flex h-screen w-full"
           modules={[
@@ -95,17 +102,14 @@ export default function Home() {
           scrollbar={{ draggable: true }}
           loop={true}
           slidesPerView={1}
-          onSlideChange={() => console.log("slide change")}
+          onSlideChange={() => console.log('slide change')}
           onSwiper={(swiper) => console.log(swiper)}
         >
-          <SwiperSlide className="w-full text-center bg-bg-1 bg-cover items-center justify-center">
-            <div className="flex bg-gradient-to-b from-pink-400 via-pink-400 h-screen w-full items-center justify-center">
-              <div className="w-full h-full justify-center">
-                <p className="text-xl text-white leading-relaxed font-medium p-8 bg-opacity-30 max-w-2xl m-auto">
-                  Umi Beauty Skincare
-                </p>
+          <SwiperSlide className="w-full text-center bg-bg-1 bg-cover items-center">
+            <div className="flex bg-gradient-to-b from-pink-400 via-pink-400 h-full w-full">
+              <div className="w-full h-full justify-center pt-40">
                 <p className="text-xl text-white leading-relaxed font-medium bg-opacity-30 max-w-2xl m-auto">
-                  Bisa Bayar di tempat{" "}
+                  Bisa Bayar di tempat{' '}
                   <span className="text-pink-600">COD Jabodetabek</span>
                 </p>
                 <p className="text-4xl text-white drop-shadow-xl leading-relaxed font-medium bg-opacity-30 pt-8 max-w-2xl m-auto">
@@ -121,36 +125,42 @@ export default function Home() {
                   Kunjungi Official Store kami
                 </p>
                 <div className="flex w-32 m-auto">
-                  <button className="flex h-12 w-12 items-center m-auto justify-center rounded-xl border-2 border-white hover:bg-white transition-all delay-100 ease-in-out mt-4">
-                    <div className="relative h-10 w-10">
-                      <Image
-                        src="/images/shopee.png"
-                        layout="fill"
-                        objectFit="contain"
-                      />
-                    </div>
-                  </button>
-                  <button className="flex h-12 w-12 items-center m-auto justify-center rounded-xl border-2 border-white hover:bg-white transition-all delay-100 ease-in-out mt-4">
-                    <div className="relative h-10 w-10">
-                      <Image
-                        src="/images/shopee.png"
-                        layout="fill"
-                        objectFit="contain"
-                      />
-                    </div>
-                  </button>
+                  <Link href="https://shopee.co.id/zibiubc153">
+                    <a target="_blank">
+                      <button className="flex h-12 w-12 items-center m-auto justify-center rounded-xl border-2 border-white hover:bg-white transition-all delay-100 ease-in-out mt-4">
+                        <div className="relative h-10 w-10">
+                          <Image
+                            src="/images/shopee.png"
+                            layout="fill"
+                            objectFit="contain"
+                          />
+                        </div>
+                      </button>
+                    </a>
+                  </Link>
+                  <Link href="https://shopee.co.id/zibiubc153">
+                    <button className="flex h-12 w-12 items-center m-auto justify-center rounded-xl border-2 border-white hover:bg-white transition-all delay-100 ease-in-out mt-4">
+                      <div className="relative h-10 w-10">
+                        <Image
+                          src="/images/shopee.png"
+                          layout="fill"
+                          objectFit="contain"
+                        />
+                      </div>
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide className="w-full text-center bg-bg-1 bg-cover items-center">
             <div className="bg-gradient-to-b from-pink-400 via-pink-400 h-full w-full">
-              <div className="w-full h-full justify-center">
+              <div className="w-full h-full justify-center pt-40">
                 <p className="text-xl text-black leading-relaxed font-medium p-8 bg-opacity-30 max-w-2xl m-auto">
                   Umi Beauty Skincare
                 </p>
                 <p className="text-xl text-black leading-relaxed font-medium bg-opacity-30 max-w-2xl m-auto">
-                  Bisa Bayar di tempat{" "}
+                  Bisa Bayar di tempat{' '}
                   <span className="text-pink-600">COD Jabodetabek</span>
                 </p>
                 <p className="text-4xl text-white drop-shadow-xl leading-relaxed font-medium bg-opacity-30 pt-8 max-w-2xl m-auto">
@@ -161,26 +171,17 @@ export default function Home() {
           </SwiperSlide>
         </Swiper>
 
-        <div className="flex flex-col items-center justify-around mt-6 text-4xl max-w-sm md:max-w-2xl">
+        <div className="flex flex-col items-center justify-around mt-6 text-4xl max-w-sm">
           {/* Jenis Paket */}
           <Paket />
 
           {/* Tentang Produk */}
-          <selection className="flex flex-col w-full h-auto mt-6 ">
-            <p className="font-medium text-4xl">Tentang Produk</p>
-            <div className="flex w-full h-60 justify-between mt-8">
-              <div className="w-[45%] h-auto px-14 pb-14 pt-8 bg-white shadow-lg rounded-2xl"></div>
-              <div className="w-[45%] h-auto px-14 pb-14 pt-8 bg-white shadow-lg rounded-2xl"></div>
-            </div>
-            <div className="flex w-full h-60 justify-between mt-3">
-              <div className="w-[45%] h-auto px-14 pb-14 pt-8 bg-white shadow-lg rounded-2xl"></div>
-              <div className="w-[45%] h-auto px-14 pb-14 pt-8 bg-white shadow-lg rounded-2xl"></div>
-            </div>
-          </selection>
-          <selection className="w-full mt-3 bg-white shadow-lg rounded-2xl">
-            <div className="flex flex-col w-full h-auto">
-              <div className="w-full px-8 pb-14 pt-8 text-left">
-                <h1 className="font-medium text-4xl">Mempersembahkan</h1>
+          <Tentang />
+
+          <selection className="w-[93%] mt-3 bg-white shadow-lg rounded-2xl">
+            <div className="flex w-full h-auto">
+              <div className="flex flex-col w-full px-4 pb-14 pt-8 text-left">
+                <h1 className="font-medium text-2xl">Mempersembahkan</h1>
                 <h2 className="text-purple-500 font-medium text-3xl my-2">
                   Umi Beauty Skincare
                 </h2>
@@ -202,7 +203,7 @@ export default function Home() {
             </div>
           </selection>
           {/* Tesimonial */}
-          <selection className="w-full mt-3">
+          <selection className="w-[93%] mt-3">
             {/* Row 1 */}
             <h1 className="font-medium text-4xl my-4">Testimonial</h1>
             <div className="flex flex-wrap w-full h-auto bg-white gap-1 justify-center shadow-lg rounded-2xl py-4">
@@ -253,10 +254,10 @@ export default function Home() {
             </div>
           </selection>
           {/* Permasalahan */}
-          <selection className="w-full mt-3 shadow-lg rounded-2xl">
+          <selection className="w-[93%] mt-3 shadow-lg rounded-2xl">
             <div className="flex flex-col w-full h-auto bg-red-600 shadow-lg rounded-2xl text-white drop-shadow-md">
               <div className="w-full px-12 pb-14 pt-3">
-                <h1 className="font-medium text-4xl py-4">Permasalahannya</h1>
+                <h1 className="font-medium text-2xl py-4">Permasalahannya</h1>
                 <p className="text-lg">
                   Pernahkah membeli skincare mahal-mahal, tapi malah enggak
                   cocok dan membuat wajah banyak jerawat dan bikin gak pede?
@@ -270,9 +271,9 @@ export default function Home() {
           </selection>
 
           {/* Paket Product */}
-          <selection className="w-full mt-3">
-            <div className="flex flex-col w-auto h-auto bg-white p-6 shadow-lg rounded-2xl justify-center">
-              <h2 className="text-white font-medium text-4xl py-4 mx-3 bg-pink-400 rounded-2xl">
+          <selection className="w-[93%] mt-3">
+            <div className="flex flex-col w-auto h-auto bg-white shadow-lg rounded-2xl justify-center">
+              <h2 className="text-white font-medium text-4xl py-4 bg-pink-400 rounded-t-2xl">
                 Umi Beauty Skincare
               </h2>
               <div className="flex flex-col w-full h-full">
@@ -343,9 +344,9 @@ export default function Home() {
             </div>
           </selection>
           {/* Manfaat */}
-          <selection className="mt-3">
+          <selection className="w-[93%] mt-3">
             <div className="flex flex-col w-full h-auto">
-              <div className="w-full h-auto bg-white p-14 text-lg shadow-lg rounded-2xl">
+              <div className="w-full h-auto bg-white p-8 text-lg shadow-lg rounded-2xl">
                 <h1 className="font-medium text-5xl mb-4">Kandungan Produk</h1>
                 <p className="font-medium text-xl my-2">
                   Umi Beauty Care Acne Spot
@@ -387,9 +388,10 @@ export default function Home() {
             </div>
           </selection>
           {/* Cara Pakai */}
-          <selection className="mt-3">
-            <div className="flex flex-col w-full h-auto px-24 py-2 bg-white shadow-lg rounded-2xl text-lg">
+          <selection className="w-[93%] mt-3">
+            <div className="flex flex-col w-full h-auto px-8 py-2 bg-white shadow-lg rounded-2xl text-lg justify-center">
               <h1 className="font-medium text-4xl py-4">Cara Pemakaian</h1>
+              <hr className="mx-auto bg-black w-1/2"></hr>
               <div className="text-left py-3 text-white">
                 <p className="p-3 bg-pink-400 shadow-md rounded-xl">
                   1. Cuci wajah kamu sebelumnya , lalu keringkan dengan tisu
@@ -416,7 +418,7 @@ export default function Home() {
                     Apakah cocok untuk semua jenis Kulit?
                   </span>
                 </p>
-                <p className="text-3xl mt-3 p-4 bg-pink-400 shadow-md rounded-xl text-white">
+                <p className="text-xl mt-3 p-4 bg-pink-400 shadow-md rounded-xl text-white">
                   Ya, Umi Skincare cocok untuk semua jenis Kulit, bahkan yang
                   sensitif sekalipun
                 </p>
@@ -428,7 +430,7 @@ export default function Home() {
                     Kalau berjerawat, boleh enggak pakai ini?
                   </span>
                 </p>
-                <p className="text-3xl mt-3 p-4 bg-pink-400 shadow-md rounded-xl text-white">
+                <p className="text-xl mt-3 p-4 bg-pink-400 shadow-md rounded-xl text-white">
                   Untuk kulit berjerawat bisa kak. Tapi jerawat yang kecil dan
                   jerawat hormonal ya kak..
                 </p>
@@ -438,7 +440,7 @@ export default function Home() {
                 <p>
                   <span className="text-2xl font-bold">Sudah ada BPOM?</span>
                 </p>
-                <p className="text-3xl mt-3 p-4 bg-pink-400 shadow-md rounded-xl text-white">
+                <p className="text-xl mt-3 p-4 bg-pink-400 shadow-md rounded-xl text-white">
                   Sudah kak. Bisa scroll ke atas untuk nomor BPOM nya.
                 </p>
                 <hr className="w-full h-auto"></hr>
@@ -447,7 +449,7 @@ export default function Home() {
                 <p>
                   <span className="text-2xl font-bold">Aman untuk Busui?</span>
                 </p>
-                <p className="text-3xl mt-3 p-4 bg-pink-400 shadow-md rounded-xl text-white">
+                <p className="text-xl mt-3 p-4 bg-pink-400 shadow-md rounded-xl text-white">
                   Aman kak, untuk ibu hamil maupun menyusui.
                 </p>
                 <hr className="w-full h-auto"></hr>
@@ -458,7 +460,7 @@ export default function Home() {
                     Kalau bruntusan bisa pakai ini gak?
                   </span>
                 </p>
-                <p className="text-3xl mt-3 p-4 bg-pink-400 shadow-md rounded-xl text-white">
+                <p className="text-xl mt-3 p-4 bg-pink-400 shadow-md rounded-xl text-white">
                   Dengan pemakaian rutin dan teratur, insya Allah Adoraly bisa
                   mengatasinya.
                 </p>
@@ -470,7 +472,7 @@ export default function Home() {
                     Untuk wajah flek sama komedo bisa pakai ini kak?
                   </span>
                 </p>
-                <p className="text-3xl mt-3 p-4 bg-pink-400 shadow-md rounded-xl text-white">
+                <p className="text-xl mt-3 p-4 bg-pink-400 shadow-md rounded-xl text-white">
                   Dengan pemakaian rutin dan teratur bisa mengurangi bahkan
                   menghilangkan flek Hitam. Dan bisa untuk mengurangi komedo.
                 </p>
@@ -482,7 +484,7 @@ export default function Home() {
                     Bikin ketergantungan enggak?
                   </span>
                 </p>
-                <p className="text-3xl mt-3 p-4 bg-pink-400 shadow-md rounded-xl text-white">
+                <p className="text-xl mt-3 p-4 bg-pink-400 shadow-md rounded-xl text-white">
                   Enggak sama sekali kak. Kapanpun kakak bisa stop memakainya
                   jika dirasa Kulit Wajah sudah cukup cerah dan glowing tanpa
                   skincare.
@@ -492,23 +494,24 @@ export default function Home() {
             </div>
           </selection>
           {/* Konsultasi */}
-          <selection>Konsultasi</selection>
+          <selection></selection>
         </div>
       </main>
 
-      <footer className="flex items-center justify-center w-full h-24 border-t">
+      <footer className="flex items-center gap-2 text-xs justify-center w-full h-24 border-t">
         <a
-          className="flex items-center justify-center"
+          className="flex flex-col items-center justify-center"
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{" "}
+          <span className="font-bold">@umibeautycare.id</span>
           <img
             src="umi-beauty-care.jpg"
             alt="Vercel Logo"
-            className="h-4 ml-2"
+            className="h-6 ml-2"
           />
+          <p>Copyright © 2021 • All Rights Reserved</p>
         </a>
       </footer>
     </div>
