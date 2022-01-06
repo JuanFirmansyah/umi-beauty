@@ -3,6 +3,7 @@ import { Items } from './data';
 import { useState } from 'react';
 import { motion, AnimatePresence, AnimateSharedLayout } from 'framer-motion';
 import Product from './Product';
+import Image from 'next/image';
 
 export const Tentang = () => {
   const [expand, setExpand] = useState(false);
@@ -18,26 +19,30 @@ export const Tentang = () => {
   };
   return (
     <selection className="flex flex-col w-full h-auto mt-6 justify-center">
-      <p className="font-medium text-4xl">Tentang Produk</p>
+      <p className="font-medium text-3xl">Tentang Produk</p>
       <AnimateSharedLayout type="crossfade">
         <div className="flex flex-row flex-wrap gap-y-2 w-full h-auto mx-auto mt-3 justify-center">
           {Items.map((item) => {
             return (
               <motion.div
-                className="relative w-[40%] h-56 mr-3 rounded-2xl shadow-2xl"
+                className="flex w-[40%] h-56 mx-2 rounded-2xl shadow-2xl"
                 onClick={() => expander(item.id)}
                 key={item.id}
                 layoutId={item.id}
               >
-                <img
-                  className="w-full h-full bg-cover rounded-lg"
-                  src={`/images/${item.image}.jpg`}
-                  alt=""
-                  x
-                />
-                <p className="absolute top-2 z-50 text-white text-lg font-semibold text-left pl-3">
-                  {item.title}
-                </p>
+                <div className="relative w-full h-full">
+                  <Image
+                    layout="fill"
+                    objectFit="cover"
+                    className="bg-cover rounded-lg"
+                    src={`/images/${item.image}.jpg`}
+                    alt=""
+                    x
+                  />
+                  <p className="absolute top-2 z-50 text-white text-xl font-semibold text-left pl-3">
+                    {item.title}
+                  </p>
+                </div>
               </motion.div>
             );
           })}

@@ -208,7 +208,7 @@ export default function Home() {
           {/* Tesimonial */}
           <selection className="w-[93%] mt-3">
             {/* Row 1 */}
-            <h1 className="font-medium text-4xl my-4">Testimonial</h1>
+            <h1 className="font-medium text-3xl my-4">Testimonial</h1>
             <div className="flex flex-wrap w-full h-auto bg-white gap-1 justify-center shadow-lg rounded-2xl py-4">
               <div className="relative h-96 w-[45%]">
                 <Image
@@ -276,7 +276,7 @@ export default function Home() {
           {/* Paket Product */}
           <selection className="w-[93%] mt-3">
             <div className="flex flex-col w-auto h-auto bg-white shadow-lg rounded-2xl justify-center">
-              <h2 className="text-white font-medium text-4xl py-4 bg-pink-400 rounded-t-2xl">
+              <h2 className="text-white font-medium text-3xl py-4 bg-pink-400 rounded-t-2xl">
                 Umi Beauty Skincare
               </h2>
               <div className="flex flex-col w-full h-full">
@@ -350,10 +350,7 @@ export default function Home() {
           <selection className="w-[93%] mt-3">
             <div className="flex flex-col w-full h-auto">
               <div className="w-full h-auto bg-white p-8 text-lg shadow-lg rounded-2xl">
-                <h1 className="font-medium text-5xl mb-4">Kandungan Produk</h1>
-                <p className="font-medium text-xl my-2">
-                  Umi Beauty Care Acne Spot
-                </p>
+                <h1 className="font-medium text-3xl mb-4">Kandungan Produk</h1>
                 <p className="font-medium my-8 text-base text-left">
                   Serum 20 ML Di dalam Acne Serum terdapat kandungan Xanthan
                   gum, Allantoin, Salicylic Acid, Alcohol, Propanediol, Maclura

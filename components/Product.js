@@ -1,7 +1,7 @@
 import React from 'react';
 import { Items } from './data';
 import { motion, AnimatePresence, AnimateSharedLayout } from 'framer-motion';
-import Link from 'next/link';
+import Image from 'next/image';
 
 const Product = ({ id, expander }) => {
   const phone = Items.find((item) => item.id === id);
@@ -36,7 +36,10 @@ const Product = ({ id, expander }) => {
             />
           </svg>
         </div>
-        <img
+        <Image
+          layout="responsive"
+          width={1080}
+          height={1080}
           className="relative w-full h-[50%] bg-contain rounded-t-lg bg-white"
           src={`/images/${phone.image}.jpg`}
           alt=""

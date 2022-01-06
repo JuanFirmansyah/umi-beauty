@@ -5,9 +5,9 @@ import Link from 'next/link';
 function Paket() {
   return (
     <selection className="flex flex-col w-full h-auto mt-3">
-      <p className="font-medium text-4xl">Paket</p>
-      <div className="flex w-full h-auto justify-between mt-6 text-center">
-        <div className="w-[45%] h-auto pb-14 bg-white shadow-lg rounded-2xl ml-3">
+      <p className="font-medium text-3xl">Paket</p>
+      <div className="flex w-full h-auto justify-center mt-6 text-center">
+        <div className="w-[40%] h-auto pb-14 bg-white shadow-lg rounded-2xl mr-2">
           <div className="relative h-60 w-full rounded-t-lg">
             <Image
               src="/images/beauty-deal.jpeg"
@@ -17,7 +17,7 @@ function Paket() {
             />
           </div>
           <p className="text-xl mt-3 font-medium">Beauty Deal Package</p>
-          <p className="text-sm mt-3 font-thin px-2">
+          <p className="text-sm mt-5 font-thin px-2">
             (Toner, Facial Soap, Cream All in one)
           </p>
           <p className="text-sm mt-3 font-medium">Rp 150.000</p>
@@ -25,7 +25,7 @@ function Paket() {
             {/* Button Whatsapp */}
             <Link href="https://api.whatsapp.com/send?phone=+62%20858-2026-7217&text=Saya%20tertarik%20untuk%20membeli%20produk%20ini%20segera.">
               <button>
-                <div className="flex w-full h-8 border-2 mt-5 border-green-500 justify-center items-center rounded-full shadow-lg hover:scale-105 transition-all hover:bg-green-500 hover:text-white hover:border-none">
+                <div className="flex w-full h-8 border-2 mt-8 border-green-500 justify-center items-center rounded-full shadow-lg hover:scale-105 transition-all hover:bg-green-500 hover:text-white hover:border-none">
                   <div className="relative w-6 h-6">
                     <Image
                       src="/images/whatsapp.png"
@@ -33,7 +33,7 @@ function Paket() {
                       objectFit="contain"
                     />
                   </div>
-                  <p className="text-sm font-medium ">Whatsapp</p>
+                  <p className="text-xs font-medium ">Whatsapp</p>
                 </div>
               </button>
             </Link>
@@ -49,14 +49,14 @@ function Paket() {
                       objectFit="contain"
                     />
                   </div>
-                  <p className="text-sm font-medium">Shopee</p>
+                  <p className="text-xs font-medium">Shopee</p>
                 </div>
               </button>
             </Link>
           </div>
         </div>
 
-        <div className="w-[45%] h-auto pb-14 bg-white shadow-lg rounded-2xl mr-3">
+        <div className="w-[40%] h-auto pb-14 bg-white shadow-lg rounded-2xl ml-2">
           <div className="relative h-60 w-full rounded-t-lg">
             <Image
               src="/images/beauty-package.jpeg"
@@ -65,7 +65,7 @@ function Paket() {
               className="rounded-t-lg"
             />
           </div>
-          <p className="text-xl mt-3 font-medium">Beauty Package</p>
+          <p className="text-xl mt-3 px-2 font-medium">Beauty Package</p>
           <p className="text-sm mt-3 font-thin px-7">
             (Toner, Facial Soap, Cream All in one) + Free Bags
           </p>
@@ -82,7 +82,7 @@ function Paket() {
                       objectFit="contain"
                     />
                   </div>
-                  <p className="text-sm font-medium ">Whatsapp</p>
+                  <p className="text-xs font-medium ">Whatsapp</p>
                 </div>
               </button>
             </Link>
@@ -98,7 +98,7 @@ function Paket() {
                       objectFit="contain"
                     />
                   </div>
-                  <p className="text-sm font-medium">Shopee</p>
+                  <p className="text-xs font-medium">Shopee</p>
                 </div>
               </button>
             </Link>
