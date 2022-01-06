@@ -19,7 +19,9 @@ import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import 'swiper/css/controller';
 import 'swiper/css/effect-coverflow';
+
 import Paket from '../components/Paket';
+
 import Tentang from '../components/Tentang';
 
 export default function Home() {
@@ -29,7 +31,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen overflow-x-hidden font-body">
       <Head>
-        <title>Umi Beauty Care || Solusi kecantikanmu</title>
+        <title>Umi Beauty Care - Solusi kecantikanmu</title>
         <link
           href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
           rel="stylesheet"
@@ -37,7 +39,7 @@ export default function Home() {
         <link rel="icon" href="/umi-beauty-care.jpg" />
       </Head>
 
-      <nav className="flex fixed z-20 top-0 w-full h-20 justify-center items-center bg-white gap-32">
+      <nav className="flex fixed z-20 top-0 w-full h-20 justify-center items-center bg-white gap-32 md:gap-40">
         <button onClick={() => setIsOpen(!isOpen)}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -85,9 +87,9 @@ export default function Home() {
         </div>
       </div>
 
-      <main className="flex flex-col items-center justify-center max-w-sm text-center bg-gray-100 font-fancy mt-20">
+      <main className="flex flex-col items-center justify-center max-w-sm md:max-w-md text-center bg-gray-100 font-fancy mt-20">
         <Swiper
-          className="flex h-screen w-full"
+          className="flex h-[637px] w-full"
           modules={[
             Navigation,
             Pagination,
@@ -97,7 +99,7 @@ export default function Home() {
             EffectCoverflow,
           ]}
           autoplay={true}
-          navigation
+          // navigation
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
           loop={true}
@@ -107,14 +109,21 @@ export default function Home() {
         >
           <SwiperSlide className="w-full text-center bg-bg-1 bg-cover items-center">
             <div className="flex bg-gradient-to-b from-pink-400 via-pink-400 h-full w-full">
-              <div className="w-full h-full justify-center pt-40">
-                <p className="text-xl text-white leading-relaxed font-medium bg-opacity-30 max-w-2xl m-auto">
-                  Bisa Bayar di tempat{' '}
-                  <span className="text-pink-600">COD Jabodetabek</span>
+              <div className="w-full h-full justify-center pt-32">
+                <p
+                  className="text-2xl text-white leading-relaxed bg-opacity-30 max-w-2xl m-auto font-thin tracking-wider
+                "
+                >
+                  UMI BEAUTY CARE
                 </p>
-                <p className="text-4xl text-white drop-shadow-xl leading-relaxed font-medium bg-opacity-30 pt-8 max-w-2xl m-auto">
+                <p className="text-3xl text-white drop-shadow-xl leading-relaxed font-medium bg-opacity-30 pt-8 max-w-2xl m-auto">
                   Rahasia Kulit Wajah Mulus dan Glowing Sampai Lanjut Usia
                 </p>
+                <button className="w-auto h-auto bg-white mt-8 rounded-full">
+                  <p className="px-8 py-2 text-base font-bold text-pink-400">
+                    ORDER NOW
+                  </p>
+                </button>
               </div>
             </div>
           </SwiperSlide>
@@ -156,29 +165,23 @@ export default function Home() {
           <SwiperSlide className="w-full text-center bg-bg-1 bg-cover items-center">
             <div className="bg-gradient-to-b from-pink-400 via-pink-400 h-full w-full">
               <div className="w-full h-full justify-center pt-40">
-                <p className="text-xl text-black leading-relaxed font-medium p-8 bg-opacity-30 max-w-2xl m-auto">
-                  Umi Beauty Skincare
-                </p>
-                <p className="text-xl text-black leading-relaxed font-medium bg-opacity-30 max-w-2xl m-auto">
-                  Bisa Bayar di tempat{' '}
-                  <span className="text-pink-600">COD Jabodetabek</span>
-                </p>
-                <p className="text-4xl text-white drop-shadow-xl leading-relaxed font-medium bg-opacity-30 pt-8 max-w-2xl m-auto">
-                  Rahasia Kulit Wajah Mulus dan Glowing Sampai Lanjut Usia
+                <p className="text-left text-4xl px-6 text-white drop-shadow-xl leading-relaxed font-medium bg-opacity-30 pt-8 max-w-2xl m-auto">
+                  COD Jabodetabek Bisa Bayar di tempat{' '}
                 </p>
               </div>
             </div>
           </SwiperSlide>
         </Swiper>
 
-        <div className="flex flex-col items-center justify-around mt-6 text-4xl max-w-sm">
+        <div className="flex flex-col items-center justify-around mt-6 text-4xl max-w-sm md:max-w-md">
           {/* Jenis Paket */}
           <Paket />
 
           {/* Tentang Produk */}
+
           <Tentang />
 
-          <selection className="w-[93%] mt-3 bg-white shadow-lg rounded-2xl">
+          <selection className="w-[93%] mt-12 bg-white shadow-lg rounded-2xl">
             <div className="flex w-full h-auto">
               <div className="flex flex-col w-full px-4 pb-14 pt-8 text-left">
                 <h1 className="font-medium text-2xl">Mempersembahkan</h1>
