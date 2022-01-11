@@ -40,7 +40,7 @@ export default function Home() {
       </Head>
 
       <nav className="flex fixed z-20 top-0 w-full h-20 justify-center items-center bg-white gap-32 md:gap-40">
-        <button onClick={() => setIsOpen(!isOpen)}>
+        <button className="ml-3" onClick={() => setIsOpen(!isOpen)}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"
@@ -64,7 +64,7 @@ export default function Home() {
       <div
         className={`${
           isOpen ? 'block' : '-translate-y-full text-white'
-        } flex fixed top-20 z-10 w-full  transition-all ease-in duration-1000`}
+        } flex fixed top-20 z-10 w-[50%]  transition-all ease-in duration-1000`}
       >
         <div className="flex w-full h-40 bg-white text-center items-center justify-center">
           <div className="w-full h-full hover:bg-pink-300">
@@ -107,9 +107,9 @@ export default function Home() {
           onSlideChange={() => console.log('slide change')}
           onSwiper={(swiper) => console.log(swiper)}
         >
-          <SwiperSlide className="w-full text-center bg-bg-1 bg-cover items-center">
-            <div className="flex bg-gradient-to-b from-pink-400 via-pink-400 h-full w-full">
-              <div className="w-full h-full justify-center pt-32">
+          <SwiperSlide className="w-full bg-cover items-center text-left">
+            <div className="flex bg-gradient-to-b from-[#ffdbac] via-[#ffdbac] h-full w-full">
+              <div className="relative w-full h-full justify-center pt-32 pl-10">
                 <p
                   className="text-2xl text-white leading-relaxed bg-opacity-30 max-w-2xl m-auto font-thin tracking-wider
                 "
@@ -119,16 +119,23 @@ export default function Home() {
                 <p className="text-3xl text-white drop-shadow-xl leading-relaxed font-medium bg-opacity-30 pt-8 max-w-2xl m-auto">
                   Rahasia Kulit Wajah Mulus dan Glowing Sampai Lanjut Usia
                 </p>
-                <button className="w-auto h-auto bg-white mt-8 rounded-full">
-                  <p className="px-8 py-2 text-base font-bold text-pink-400">
-                    ORDER NOW
-                  </p>
-                </button>
+                <Link href="https://api.whatsapp.com/send?phone=+62%20858-2026-7217&text=Saya%20tertarik%20untuk%20membeli%20produk%20ini%20segera.">
+                  <a target="_blank">
+                    <button className="relative z-30 w-auto h-auto bg-white mt-8 rounded-full mr-4 transition-all hover:cursor-pointer hover:scale-110 delay-100-">
+                      <p className="px-8 py-2 text-base font-bold text-[#ffdbac]">
+                        ORDER NOW
+                      </p>
+                    </button>
+                  </a>
+                </Link>
+                <div className="absolute z-10 w-[400px] h-[400px] top-72 left-24">
+                  <img src="/images/slide1.png" />
+                </div>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide className="w-full text-center bg-bg-1 bg-cover items-center">
-            <div className="bg-gradient-to-b from-pink-400 via-pink-400 h-full w-full">
+            <div className="bg-gradient-to-b from-[#ffdbac] via-[#ffdbac] h-full w-full">
               <div className="w-full h-full justify-center pt-40">
                 <p className="text-4xl text-white drop-shadow-xl leading-relaxed font-medium bg-opacity-30 pt-8 max-w-2xl m-auto">
                   Kunjungi Official Store kami
@@ -163,7 +170,7 @@ export default function Home() {
             </div>
           </SwiperSlide>
           <SwiperSlide className="w-full text-center bg-bg-1 bg-cover items-center">
-            <div className="bg-gradient-to-b from-pink-400 via-pink-400 h-full w-full">
+            <div className="bg-gradient-to-b from-[#ffdbac] via-[#ffdbac] h-full w-full">
               <div className="w-full h-full justify-center pt-40">
                 <p className="text-left text-4xl px-6 text-white drop-shadow-xl leading-relaxed font-medium bg-opacity-30 pt-8 max-w-2xl m-auto">
                   COD Jabodetabek Bisa Bayar di tempat{' '}
@@ -181,30 +188,6 @@ export default function Home() {
 
           <Tentang />
 
-          <selection className="w-[93%] mt-12 bg-white shadow-lg rounded-2xl">
-            <div className="flex w-full h-auto">
-              <div className="flex flex-col w-full px-4 pb-14 pt-8 text-left">
-                <h1 className="font-medium text-2xl">Mempersembahkan</h1>
-                <h2 className="text-purple-500 font-medium text-3xl my-2">
-                  Umi Beauty Skincare
-                </h2>
-                <hr className="w-full h-1 bg-black color rounded-full"></hr>
-                <p className="text-pink-500 font-medium py-8 text-2xl">
-                  Umi Beauty Skincare memberikan solusi untuk Kamu yang ingin
-                  segera memiliki Wajah Sehat, Mulus, Glowing dan Cerah Merona
-                  secara Mudah dan pastinya AMAN.
-                </p>
-                <p className="w-[75%] text-base font-medium">
-                  Dengan komposisi formula Herbal Alami seperti minyak zaitun,
-                  kurma, daun bidara, habbatussauda dan madu diolah dengan
-                  teknologi nano, mampu membantu mengatasi berbagai permasalahan
-                  kulit wajah tropis Indonesia seperti jerawat, bekas jerawat,
-                  bruntusan, flek hitam, kerutan, kulit kusam, komedo, dan
-                  berbagai permasalahan kulit wajah lainnya.
-                </p>
-              </div>
-            </div>
-          </selection>
           {/* Tesimonial */}
           <selection className="w-[93%] mt-3">
             {/* Row 1 */}
@@ -276,8 +259,8 @@ export default function Home() {
           {/* Paket Product */}
           <selection className="w-[93%] mt-3">
             <div className="flex flex-col w-auto h-auto bg-white shadow-lg rounded-2xl justify-center">
-              <h2 className="text-white font-medium text-3xl py-4 bg-pink-400 rounded-t-2xl">
-                Umi Beauty Skincare
+              <h2 className="text-white font-medium text-3xl py-4 bg-[#ffdbac] rounded-t-2xl">
+                MIRACLE SERUM
               </h2>
               <div className="flex flex-col w-full h-full">
                 <div className="flex h-96 w-auto justify-center">
@@ -295,49 +278,49 @@ export default function Home() {
                 </span>
               </div>
               <div className="flex flex-wrap w-full h-auto justify-center mt-4 text-base text-white font-medium">
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400">
+                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-[#ffdbac]">
                   <p>Kulit putih alami</p>
                 </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400">
+                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-[#ffdbac]">
                   <p>Glowing, cerah merata</p>
                 </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400">
+                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-[#ffdbac]">
                   <p>Menghilangkan bruntusan</p>
                 </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400">
+                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-[#ffdbac]">
                   <p>Menghilangkan pori-pori besar</p>
                 </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400">
+                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-[#ffdbac]">
                   <p>Anti penuaan dini</p>
                 </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400">
+                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-[#ffdbac]">
                   <p>Untuk semua jenis kulit</p>
                 </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400">
+                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-[#ffdbac]">
                   <p>Menghilangkan bekas bopeng</p>
                 </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400">
+                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-[#ffdbac]">
                   <p>Aman buat Bumil dan Busui</p>
                 </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400">
+                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-[#ffdbac]">
                   <p>Bisa digunakan untuk umur 13 Tahun keatas</p>
                 </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400">
+                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-[#ffdbac]">
                   <p>Mencerahkan kulit wajah yang kusam</p>
                 </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400">
+                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-[#ffdbac]">
                   <p>Membuat wajah glow up</p>
                 </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400">
+                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-[#ffdbac]">
                   <p>
                     Membantu menghilangkan jerawat bahkan jerawat batu dan bekas
                     jerawat
                   </p>
                 </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400">
+                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-[#ffdbac]">
                   <p>Bintik hitam/flek membandel pada kulit wajah</p>
                 </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-pink-400">
+                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-[#ffdbac]">
                   <p>
                     Membantu menghilangkan jerawat bahkan jerawat batu dan bekas
                     jerawat
@@ -347,60 +330,21 @@ export default function Home() {
             </div>
           </selection>
           {/* Manfaat */}
-          <selection className="w-[93%] mt-3">
-            <div className="flex flex-col w-full h-auto">
-              <div className="w-full h-auto bg-white p-8 text-lg shadow-lg rounded-2xl">
-                <h1 className="font-medium text-3xl mb-4">Kandungan Produk</h1>
-                <p className="font-medium my-8 text-base text-left">
-                  Serum 20 ML Di dalam Acne Serum terdapat kandungan Xanthan
-                  gum, Allantoin, Salicylic Acid, Alcohol, Propanediol, Maclura
-                  Cochinchin-Ensis Leaf Prenylflavonoids, Niacinamide, Disodium
-                  EDTA, Propylene Glycol, Glycerin, DMDM Hydantoin, Peg-40
-                  Hydrogenated Castor Oil, Fragrance, C 19140, Aqua yang dimana
-                  bermanfaat sebagai :
-                </p>
-                <div className="text-white text-left">
-                  <p className="mt-3 p-3 bg-pink-400 shadow-md rounded-xl">
-                    1. Membantu menyembuhkan jerawat meradang, jerawat batu,
-                    beruntusan, kulit kemerahan dan iritasi.
-                  </p>
-                  <p className="mt-3 p-3 bg-pink-400 shadow-md rounded-xl">
-                    2. Membantu meregenerasi dan menjaga kulit yang sensitive
-                    tanpa menimbulkan iritasi.
-                  </p>
-                  <p className="mt-3 p-3 bg-pink-400 shadow-md rounded-xl">
-                    3. Membantu menenangkan kulit, menghaluskan dan juga
-                    membantu memudarkan bekas jerawat atau luka.
-                  </p>
-                  <p className="mt-3 p-3 bg-pink-400 shadow-md rounded-xl">
-                    4. Membantu mencerahkan kulit secara aman karena menggunakan
-                    Maclura Cochinchin-Ensis Leaf Prenylflavonoids dan Vitamin C
-                    yang juga berfungsi sebagai anti oxidant + anti pollution.
-                  </p>
-                  <p className="mt-3 p-3 bg-pink-400 shadow-md rounded-xl">
-                    5. Membantu mengontrol kadar minyak berlebih di kulit.
-                  </p>
-                  <p className="mt-3 p-3 bg-pink-400 shadow-md rounded-xl">
-                    6. Menghilangkan flek di wajah.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </selection>
+
           {/* Cara Pakai */}
           <selection className="w-[93%] mt-3">
             <div className="flex flex-col w-full h-auto px-8 py-2 bg-white shadow-lg rounded-2xl text-lg justify-center">
               <h1 className="font-medium text-4xl py-4">Cara Pemakaian</h1>
               <hr className="mx-auto bg-black w-1/2"></hr>
               <div className="text-left py-3 text-white">
-                <p className="p-3 bg-pink-400 shadow-md rounded-xl">
+                <p className="p-3 bg-[#ffdbac] shadow-md rounded-xl">
                   1. Cuci wajah kamu sebelumnya , lalu keringkan dengan tisu
                 </p>
-                <p className="mt-3 p-3 bg-pink-400 shadow-md rounded-xl">
+                <p className="mt-3 p-3 bg-[#ffdbac] shadow-md rounded-xl">
                   2. Teteskan 2-3 tetes serum, usap dan pijat secara perlahan
                   sampai merata pada kulit wajah.
                 </p>
-                <p className="mt-3 p-3 bg-pink-400 shadow-md rounded-xl">
+                <p className="mt-3 p-3 bg-[#ffdbac] shadow-md rounded-xl">
                   3. Diamkan setengah jam agar serum meresap ke kulit.
                 </p>
               </div>
@@ -418,7 +362,7 @@ export default function Home() {
                     Apakah cocok untuk semua jenis Kulit?
                   </span>
                 </p>
-                <p className="text-xl mt-3 p-4 bg-pink-400 shadow-md rounded-xl text-white">
+                <p className="text-xl mt-3 p-4 bg-[#ffdbac] shadow-md rounded-xl text-white">
                   Ya, Umi Skincare cocok untuk semua jenis Kulit, bahkan yang
                   sensitif sekalipun
                 </p>
@@ -430,7 +374,7 @@ export default function Home() {
                     Kalau berjerawat, boleh enggak pakai ini?
                   </span>
                 </p>
-                <p className="text-xl mt-3 p-4 bg-pink-400 shadow-md rounded-xl text-white">
+                <p className="text-xl mt-3 p-4 bg-[#ffdbac] shadow-md rounded-xl text-white">
                   Untuk kulit berjerawat bisa kak. Tapi jerawat yang kecil dan
                   jerawat hormonal ya kak..
                 </p>
@@ -440,7 +384,7 @@ export default function Home() {
                 <p>
                   <span className="text-2xl font-bold">Sudah ada BPOM?</span>
                 </p>
-                <p className="text-xl mt-3 p-4 bg-pink-400 shadow-md rounded-xl text-white">
+                <p className="text-xl mt-3 p-4 bg-[#ffdbac] shadow-md rounded-xl text-white">
                   Sudah kak. Bisa scroll ke atas untuk nomor BPOM nya.
                 </p>
                 <hr className="w-full h-auto"></hr>
@@ -449,7 +393,7 @@ export default function Home() {
                 <p>
                   <span className="text-2xl font-bold">Aman untuk Busui?</span>
                 </p>
-                <p className="text-xl mt-3 p-4 bg-pink-400 shadow-md rounded-xl text-white">
+                <p className="text-xl mt-3 p-4 bg-[#ffdbac] shadow-md rounded-xl text-white">
                   Aman kak, untuk ibu hamil maupun menyusui.
                 </p>
                 <hr className="w-full h-auto"></hr>
@@ -460,7 +404,7 @@ export default function Home() {
                     Kalau bruntusan bisa pakai ini gak?
                   </span>
                 </p>
-                <p className="text-xl mt-3 p-4 bg-pink-400 shadow-md rounded-xl text-white">
+                <p className="text-xl mt-3 p-4 bg-[#ffdbac] shadow-md rounded-xl text-white">
                   Dengan pemakaian rutin dan teratur, insya Allah Adoraly bisa
                   mengatasinya.
                 </p>
@@ -472,7 +416,7 @@ export default function Home() {
                     Untuk wajah flek sama komedo bisa pakai ini kak?
                   </span>
                 </p>
-                <p className="text-xl mt-3 p-4 bg-pink-400 shadow-md rounded-xl text-white">
+                <p className="text-xl mt-3 p-4 bg-[#ffdbac] shadow-md rounded-xl text-white">
                   Dengan pemakaian rutin dan teratur bisa mengurangi bahkan
                   menghilangkan flek Hitam. Dan bisa untuk mengurangi komedo.
                 </p>
@@ -484,7 +428,7 @@ export default function Home() {
                     Bikin ketergantungan enggak?
                   </span>
                 </p>
-                <p className="text-xl mt-3 p-4 bg-pink-400 shadow-md rounded-xl text-white">
+                <p className="text-xl mt-3 p-4 bg-[#ffdbac] shadow-md rounded-xl text-white">
                   Enggak sama sekali kak. Kapanpun kakak bisa stop memakainya
                   jika dirasa Kulit Wajah sudah cukup cerah dan glowing tanpa
                   skincare.

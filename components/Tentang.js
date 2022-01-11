@@ -39,7 +39,7 @@ export const Tentang = () => {
                     alt=""
                     x
                   />
-                  <p className="absolute top-2 z-50 text-white text-xl font-semibold text-left pl-3">
+                  <p className="absolute top-2 z-50 text-white text-xl font-semibold text-left pl-3 drop-shadow-md">
                     {item.title}
                   </p>
                 </div>

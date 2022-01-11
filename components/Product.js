@@ -48,8 +48,10 @@ const Product = ({ id, expander }) => {
           <p className="px-6 text-2xl font-extrabold text-left pt-3">
             {phone.title}
           </p>
-          <hr className="w-[40%] mx-6 mt-3 h-2 bg-black"></hr>
+          <hr className="w-[30%] mx-6 mt-1 h-2 bg-black"></hr>
           <p className="px-6 text-left text-base pb-20 pt-3">{phone.desc}</p>
+          <p className="px-6 text-xl font-extrabold text-left">Ingredients</p>
+          <p className="px-6 text-left text-base pb-20 pt-3">{phone.ing}</p>
         </div>
       </div>
     </motion.div>

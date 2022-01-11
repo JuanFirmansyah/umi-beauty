@@ -5,7 +5,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'bg-1': "url('/bg1.jpeg')",
+        'bg-1': "url('/images/beauty-package.jpg')",
+        'bg-2': "url('/bg1.jpeg')",
       },
       fontFamily: {
         body: ['Poppins', 'sans-serif'],

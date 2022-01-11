@@ -10,7 +10,7 @@ function Paket() {
         <div className="w-[40%] h-auto pb-14 bg-white shadow-lg rounded-2xl mr-2">
           <div className="relative h-60 w-full rounded-t-lg">
             <Image
-              src="/images/beauty-deal.jpeg"
+              src="/images/beauty-deal.jpg"
               layout="fill"
               objectFit="cover"
               className="rounded-t-lg"
@@ -59,7 +59,7 @@ function Paket() {
         <div className="w-[40%] h-auto pb-14 bg-white shadow-lg rounded-2xl ml-2">
           <div className="relative h-60 w-full rounded-t-lg">
             <Image
-              src="/images/beauty-package.jpeg"
+              src="/images/beauty-package.jpg"
               layout="fill"
               objectFit="cover"
               className="rounded-t-lg"
