@@ -30,16 +30,16 @@ export const Tentang = () => {
                 key={item.id}
                 layoutId={item.id}
               >
-                <div className="relative w-full h-full">
+                <div className="relative w-full h-full bg-[#FFCDFE]">
                   <Image
                     layout="fill"
                     objectFit="cover"
                     className="bg-cover rounded-lg"
-                    src={`/images/${item.image}.jpg`}
+                    src={`/images/${item.image}.png`}
                     alt=""
                     x
                   />
-                  <p className="absolute top-2 z-50 text-white text-xl font-semibold text-left pl-3 drop-shadow-md">
+                  <p className="absolute top-2 z-50 text-[#5E008C] text-xl font-semibold text-left pl-3 drop-shadow-md">
                     {item.title}
                   </p>
                 </div>

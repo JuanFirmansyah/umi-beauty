@@ -40,8 +40,8 @@ const Product = ({ id, expander }) => {
           layout="responsive"
           width={1080}
           height={1080}
-          className="relative w-full h-[50%] bg-contain rounded-t-lg bg-white"
-          src={`/images/${phone.image}.jpg`}
+          className="relative w-full h-[50%] bg-contain rounded-t-lg bg-[#FFCDFE]"
+          src={`/images/${phone.image}.png`}
           alt=""
         />
         <div className="w-full h-full">

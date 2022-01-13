@@ -9,7 +9,8 @@ module.exports = {
         'bg-2': "url('/bg1.jpeg')",
       },
       fontFamily: {
-        body: ['Poppins', 'sans-serif'],
+        body: ['Josefin Sans', 'sans-serif'],
+        body1: ['Marcellus', 'serif'],
       },
     },
   },

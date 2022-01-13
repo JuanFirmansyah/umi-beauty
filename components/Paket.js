@@ -8,9 +8,9 @@ function Paket() {
       <p className="font-medium text-3xl">Paket</p>
       <div className="flex w-full h-auto justify-center mt-6 text-center">
         <div className="w-[40%] h-auto pb-14 bg-white shadow-lg rounded-2xl mr-2">
-          <div className="relative h-60 w-full rounded-t-lg">
+          <div className="relative h-60 w-full rounded-t-lg bg-[#FFCDFE]">
             <Image
-              src="/images/beauty-deal.jpg"
+              src="/images/beauty-deal.png"
               layout="fill"
               objectFit="cover"
               className="rounded-t-lg"
@@ -57,9 +57,9 @@ function Paket() {
         </div>
 
         <div className="w-[40%] h-auto pb-14 bg-white shadow-lg rounded-2xl ml-2">
-          <div className="relative h-60 w-full rounded-t-lg">
+          <div className="relative h-60 w-full rounded-t-lg bg-[#FFCDFE]">
             <Image
-              src="/images/beauty-package.jpg"
+              src="/images/beauty-package.png"
               layout="fill"
               objectFit="cover"
               className="rounded-t-lg"
