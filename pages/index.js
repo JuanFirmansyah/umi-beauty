@@ -391,8 +391,11 @@ export default function Home() {
               </div>
             </div>
           </selection>
-          {/* Konsultasi */}
-          <selection></selection>
+
+          {/* Contact */}
+          <selection>
+            <div className="w-full h-auto"></div>
+          </selection>
         </div>
       </main>
 

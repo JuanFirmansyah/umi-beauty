@@ -7,7 +7,7 @@ function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <nav className="flex fixed z-40 top-0 h-20  max-w-sm md:max-w-md bg-white">
+      <nav className="flex fixed z-40 top-0 h-20  max-w-sm md:max-w-md bg-white rounded-b-lg shadow-md">
         <div className="flex w-full h-auto z-30 justify-center items-center gap-32 md:gap-40">
           <button className="pl-6" onClick={() => setIsOpen(!isOpen)}>
             <svg
@@ -37,34 +37,44 @@ function Nav() {
         <div
           className={`${
             isOpen ? 'block' : '-translate-y-full text-white'
-          } flex fixed top-20 z-10 transition-all ease-in duration-1000 max-w-sm md:max-w-md h-auto`}
+          } flex fixed top-20 z-10 transition-all ease-in duration-700 max-w-sm md:max-w-md h-auto`}
         >
-          <div className="flex w-[488px] h-24 bg-white text-center items-center justify-between rounded-b-xl">
+          <div className="flex w-[488px] h-24 bg-white text-center items-center justify-between shadow-md rounded-b-xl px-2 text-sm">
             <div className="flex w-full h-full justify-center items-center">
               <Link href="/">
-                <a className="tracking-normal justify-center items-center">
+                <a className="tracking-normal justify-center items-center hover:text-[#5E008C] active:text-[#5E008C] ">
                   Home
                 </a>
               </Link>
             </div>
-            <div className="flex w-full h-full justify-center items-center">
+            <div className="flex w-full h-full justify-center items-center hover:text-[#5E008C] active:text-[#5E008C]">
               <Link href="/testimonial">
+                <a className="tracking-wider">Paket</a>
+              </Link>
+            </div>
+            <div className="flex w-full h-full justify-center items-center hover:text-[#5E008C] active:text-[#5E008C]">
+              <Link href="/pesan">
                 <a className="tracking-wider">Testi</a>
               </Link>
             </div>
-            <div className="flex w-full h-full justify-center items-center">
+            <div className="flex w-full h-full justify-center items-center hover:text-[#5E008C] active:text-[#5E008C]">
               <Link href="/pesan">
-                <a className="tracking-wider">Tentang</a>
+                <a className="tracking-wider">About</a>
               </Link>
             </div>
-            <div className="flex w-full h-full justify-center items-center">
+            <div className="flex w-full h-full justify-center items-center hover:text-[#5E008C] active:text-[#5E008C]">
+              <Link href="/pesan">
+                <a className="tracking-wider">Cara</a>
+              </Link>
+            </div>
+            <div className="flex w-full h-full justify-center items-center hover:text-[#5E008C] active:text-[#5E008C]">
+              <Link href="/pesan">
+                <a className="tracking-wider">FAQ</a>
+              </Link>
+            </div>
+            <div className="flex w-full h-full justify-center items-center hover:text-[#5E008C] active:text-[#5E008C]">
               <Link href="/pesan">
                 <a className="tracking-wider">Contact</a>
-              </Link>
-            </div>
-            <div className="flex w-full h-full justify-center items-center">
-              <Link href="/pesan">
-                <a className="tracking-wider">Pesan</a>
               </Link>
             </div>
           </div>
