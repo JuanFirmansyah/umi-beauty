@@ -1,5 +1,4 @@
 export const Items = [
-  // Photo by Alessandra Caretto on Unsplash
   {
     id: 'a',
     image: 'cream',

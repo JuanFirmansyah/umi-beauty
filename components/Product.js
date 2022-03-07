@@ -40,7 +40,7 @@ const Product = ({ id, expander }) => {
           layout="responsive"
           width={1080}
           height={1080}
-          className="relative w-full h-[50%] bg-contain rounded-t-lg bg-[#FFCDFE]"
+          className="relative w-full h-[50%] rounded-t-lg bg-bg-2 bg-cover"
           src={`/images/${phone.image}.png`}
           alt=""
         />

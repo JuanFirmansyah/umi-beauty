@@ -18,26 +18,31 @@ export const Tentang = () => {
     }
   };
   return (
-    <selection className="flex flex-col w-full h-auto mt-6 justify-center">
-      <p className="font-medium text-3xl">Tentang Produk</p>
+    <selection
+      className="flex flex-col w-full h-auto mt-16 justify-center text-center"
+      id="about"
+    >
+      <h2 className="font-medium text-4xl md:text-5xl">Product</h2>
+      <p className="font-medium text-xl md:text-lg text-center w-full px-6">
+        ssst!! check out our secret Ingredients
+      </p>
       <AnimateSharedLayout type="crossfade">
-        <div className="flex flex-row flex-wrap gap-y-2 w-full h-auto mx-auto mt-3 justify-center">
+        <div className="flex flex-row flex-wrap gap-y-2 w-full h-auto mx-auto mt-10 justify-center">
           {Items.map((item) => {
             return (
               <motion.div
-                className="flex w-[40%] h-56 mx-2 rounded-2xl shadow-2xl"
+                className="flex w-[40%] h-56 md:h-96 mx-2 rounded-4xl overflow-hidden shadow-xl"
                 onClick={() => expander(item.id)}
                 key={item.id}
                 layoutId={item.id}
               >
-                <div className="relative w-full h-full bg-[#FFCDFE]">
+                <div className="relative w-full h-full bg-bg-2 rounded-lg overflow-hidden">
                   <Image
                     layout="fill"
                     objectFit="cover"
                     className="bg-cover rounded-lg"
                     src={`/images/${item.image}.png`}
                     alt=""
-                    x
                   />
                   <p className="absolute top-2 z-20 text-[#5E008C] text-xl font-semibold text-left pl-3 drop-shadow-md">
                     {item.title}
