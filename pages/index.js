@@ -32,6 +32,40 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen overflow-x-hidden font-body">
       <Head>
+        <meta
+          name="description"
+          content="Umi Beuaty Skincare adalah salah satu perusahaan skincare terbesar di Indonesia yang menyediakan produk skincare untuk kulit dan kecantikan wanita. Umi Beuaty Skincare menyediakan produk skincare untuk kulit dan kecantikan wanita dengan harga yang terjangkau dan berkualitas."
+        />
+        <meta name="keywords" content="Skincare, Serum, Cream" />
+        <meta name="author" content="Umi Beuaty Skincare" />
+        <meta name="copyright" content="Umi Beuaty Skincare" />
+        <meta name="robots" content="index, follow" />
+        <meta name="revisit-after" content="1 days" />
+        <meta name="language" content="Indonesia" />
+        <meta name="geo.placename" content="Jakarta" />
+        <meta name="geo.region" content="ID" />
+        <meta name="geo.position" content="-6.174465;106.827152" />
+        <meta name="ICBM" content="-6.174465, 106.827152" />
+        <meta name="DC.title" content="Umi Beuaty Skincare" />
+        <meta name="DC.subject" content="Skincare, Serum, Cream" />
+        <meta name="DC.creator" content="Umi Beuaty Skincare" />
+        <meta name="DC.publisher" content="Umi Beuaty Skincare" />
+        <meta name="DC.description" content="Umi Beuaty Skincare" />
+        <meta name="DC.language" content="Indonesia" />
+        <meta name="DC.rights" content="Umi Beuaty Skincare" />
+        <meta name="DC.format" content="text/html" />
+        <meta name="DC.type" content="text/html" />
+        <meta name="DC.date" content="2020-06-01" />
+        <meta name="DC.identifier" content="https://umibeuatyskincare.com/" />
+        <meta name="DC.coverage" content="Jakarta" />
+        <meta name="DC.relation" content="https://umibeuatyskincare.com/" />
+        <meta name="DC.source" content="https://umibeuatyskincare.com/" />
+        <meta
+          name="DC.identifier"
+          content="https://www.umibeuatyskincare.com/"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
         <title>Umi Beauty Care - Solusi kecantikanmu</title>
         <link
           href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Marcellus&display=swap"
@@ -147,115 +181,6 @@ export default function Home() {
           {/* Tesimonial */}
           <Testimonial />
 
-          {/* Permasalahan */}
-          {/* <selection className="w-[93%] mt-3 shadow-lg rounded-2xl">
-            <div className="flex flex-col w-full h-auto bg-white shadow-lg rounded-2xl text-[#5E008C] drop-shadow-md">
-              <div className="w-full px-12 pb-14 pt-3">
-                <h1 className="font-medium text-2xl py-4">Permasalahannya</h1>
-                <p className="text-lg">
-                  Pernahkah membeli skincare mahal-mahal, tapi malah enggak
-                  cocok dan membuat wajah banyak jerawat dan bikin gak pede?
-                </p>
-                <p className="text-lg mt-8 drop-shadow-2xl">
-                  Banyak faktor yang menyebabkannya. Salah satu penyebabnya
-                  yaitu Kualitas Produk Skincare itu sendiri.
-                </p>
-              </div>
-            </div>
-          </selection> */}
-          {/* Paket Product */}
-          {/* <selection className="w-[93%] mt-3">
-            <div className="flex flex-col w-auto h-auto bg-white shadow-lg rounded-2xl justify-center">
-              <h2 className="text-[#5E008C] font-medium text-3xl py-4 bg-[#FFCDFE] rounded-t-2xl">
-                MIRACLE SERUM
-              </h2>
-              <div className="flex flex-col w-full h-full">
-                <div className="flex h-96 w-auto justify-center">
-                  <div className="relative h-96 w-[45%]">
-                    <Image
-                      className="rounded-md"
-                      src="/paket.png"
-                      layout="fill"
-                      objectFit="cover"
-                    />
-                  </div>
-                </div>
-                <span className="font-medium text-3xl py-6">
-                  ACNE SPOT SERUM
-                </span>
-              </div>
-              <div className="flex flex-wrap w-full h-auto justify-center mt-4 text-base text-[#5E008C] font-medium">
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-[#FFCDFE]">
-                  <p>Kulit putih alami</p>
-                </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-[#FFCDFE]">
-                  <p>Glowing, cerah merata</p>
-                </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-[#FFCDFE]">
-                  <p>Menghilangkan bruntusan</p>
-                </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-[#FFCDFE]">
-                  <p>Menghilangkan pori-pori besar</p>
-                </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-[#FFCDFE]">
-                  <p>Anti penuaan dini</p>
-                </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-[#FFCDFE]">
-                  <p>Untuk semua jenis kulit</p>
-                </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-[#FFCDFE]">
-                  <p>Menghilangkan bekas bopeng</p>
-                </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-[#FFCDFE]">
-                  <p>Aman buat Bumil dan Busui</p>
-                </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-[#FFCDFE]">
-                  <p>Bisa digunakan untuk umur 13 Tahun keatas</p>
-                </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-[#FFCDFE]">
-                  <p>Mencerahkan kulit wajah yang kusam</p>
-                </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-[#FFCDFE]">
-                  <p>Membuat wajah glow up</p>
-                </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-[#FFCDFE]">
-                  <p>
-                    Membantu menghilangkan jerawat bahkan jerawat batu dan bekas
-                    jerawat
-                  </p>
-                </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-[#FFCDFE]">
-                  <p>Bintik hitam/flek membandel pada kulit wajah</p>
-                </div>
-                <div className="flex w-[100%] h-20 border-2 m-2 rounded-lg items-center justify-center bg-[#FFCDFE]">
-                  <p>
-                    Membantu menghilangkan jerawat bahkan jerawat batu dan bekas
-                    jerawat
-                  </p>
-                </div>
-              </div>
-            </div>
-          </selection> */}
-          {/* Manfaat */}
-          {/* Cara Pakai */}
-          {/* <selection className="w-[93%] mt-3">
-            <div className="flex flex-col w-full h-auto px-8 py-2 bg-white shadow-lg rounded-2xl text-lg justify-center">
-              <h1 className="font-medium text-4xl py-4">Cara Pemakaian</h1>
-              <hr className="mx-auto bg-black w-1/2"></hr>
-              <div className="text-left py-3 text-[#5E008C]">
-                <p className="p-3 bg-[#FFCDFE] shadow-md rounded-xl">
-                  1. Cuci wajah kamu sebelumnya , lalu keringkan dengan tisu
-                </p>
-                <p className="mt-3 p-3 bg-[#FFCDFE] shadow-md rounded-xl">
-                  2. Teteskan 2-3 tetes serum, usap dan pijat secara perlahan
-                  sampai merata pada kulit wajah.
-                </p>
-                <p className="mt-3 p-3 bg-[#FFCDFE] shadow-md rounded-xl">
-                  3. Diamkan setengah jam agar serum meresap ke kulit.
-                </p>
-              </div>
-            </div>
-          </selection> */}
           {/* FAQ */}
           <selection className="mt-14" id="qna">
             <div className="flex max-w-2xl h-auto text-black">
