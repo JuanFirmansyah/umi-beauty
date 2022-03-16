@@ -19,7 +19,7 @@ export const Tentang = () => {
   };
   return (
     <selection
-      className="flex flex-col w-full h-auto mt-16 justify-center text-center"
+      className="flex flex-col w-full h-auto mt-32 justify-center text-center"
       id="about"
     >
       <h2 className="font-medium text-4xl md:text-5xl">Product</h2>
@@ -27,7 +27,7 @@ export const Tentang = () => {
         ssst!! check out our secret Ingredients
       </p>
       <AnimateSharedLayout type="crossfade">
-        <div className="flex flex-row flex-wrap gap-y-2 w-full h-auto mx-auto mt-10 justify-center">
+        <div className="flex flex-row flex-wrap gap-y-6 w-full h-auto mx-auto mt-10 justify-center">
           {Items.map((item) => {
             return (
               <motion.div

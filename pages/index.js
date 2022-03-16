@@ -42,7 +42,10 @@ export default function Home() {
 
       <Nav />
 
-      <main className="flex flex-col items-center justify-center max-w-sm md:max-w-full text-center bg-gray-100 font-fancy ">
+      <main
+        className="flex flex-col items-center justify-center max-w-sm md:max-w-full text-center bg-gray-100 font-fancy mx-auto
+      "
+      >
         <Swiper
           className="flex h-screen w-full"
           modules={[
@@ -83,7 +86,7 @@ export default function Home() {
                     </button>
                   </a>
                 </Link>
-                <div className="absolute z-10 w-[400px] h-[400px] top-72 left-24">
+                <div className="absolute z-10 w-[400px] h-[400px] md:w-[750px] md:h-[750px] top-72 md:top-28 left-24 md:left-[650px]">
                   <img src="/images/slide1.png" />
                 </div>
               </div>
@@ -92,7 +95,7 @@ export default function Home() {
           <SwiperSlide className="w-full text-center bg-bg-1 bg-cover items-center">
             <div className="h-full w-full">
               <div className="w-full h-full justify-center pt-40">
-                <p className="text-4xl text-[#5E008C] drop-shadow-xl leading-relaxed font-medium bg-opacity-30 pt-8 max-w-2xl m-auto">
+                <p className="text-4xl text-black drop-shadow-xl leading-relaxed font-medium bg-opacity-30 pt-8 max-w-2xl m-auto">
                   Kunjungi Official Store kami
                 </p>
                 <div className="flex w-32 m-auto">
@@ -127,7 +130,7 @@ export default function Home() {
           <SwiperSlide className="w-full text-center bg-bg-1 bg-cover items-center">
             <div className="h-full w-full">
               <div className="w-full h-full justify-center pt-40">
-                <p className="text-left text-4xl px-6 text-[#5E008C] drop-shadow-xl leading-relaxed font-medium bg-opacity-30 pt-8 max-w-2xl m-auto">
+                <p className="text-left text-4xl px-6 text-black drop-shadow-xl leading-relaxed font-medium bg-opacity-30 pt-8 max-w-2xl m-auto">
                   COD Jabodetabek Bisa Bayar di tempat{' '}
                 </p>
               </div>
@@ -262,7 +265,7 @@ export default function Home() {
                     <h1 className="font-medium text-7xl py-4">FAQ</h1>
                     <h2 className="text-xl py-2">Hal yang sering ditanyakan</h2>
                   </div>
-                  <div className="w-auto h-auto  p-14 ">
+                  <div className="w-auto h-auto p-0 md:p-14 pt-14 md:pt-6">
                     <p>
                       <span className="text-2xl font-bold">
                         Apakah cocok untuk semua jenis Kulit?
@@ -275,7 +278,7 @@ export default function Home() {
                     </p>
                     <hr className="w-full h-auto"></hr>
                   </div>
-                  <div className="w-full h-auto  p-14 ">
+                  <div className="w-full h-auto p-0 md:p-14 pt-14 md:pt-6">
                     <p>
                       <span className="text-2xl font-bold">
                         Kalau berjerawat, boleh enggak pakai ini?
@@ -287,7 +290,7 @@ export default function Home() {
                     </p>
                     <hr className="w-full h-auto"></hr>
                   </div>
-                  <div className="w-full h-auto  p-14 ">
+                  <div className="w-full h-auto p-0 md:p-14 pt-14 md:pt-6">
                     <p>
                       <span className="text-2xl font-bold">
                         Sudah ada BPOM?
@@ -298,7 +301,7 @@ export default function Home() {
                     </p>
                     <hr className="w-full h-auto"></hr>
                   </div>
-                  <div className="w-full h-auto  p-14 ">
+                  <div className="w-full h-auto p-0 md:p-14 pt-14 md:pt-6">
                     <p>
                       <span className="text-2xl font-bold">
                         Aman untuk Busui?
@@ -309,7 +312,7 @@ export default function Home() {
                     </p>
                     <hr className="w-full h-auto"></hr>
                   </div>
-                  <div className="w-full h-auto  p-14 ">
+                  <div className="w-full h-auto p-0 md:p-14 pt-14 md:pt-6">
                     <p>
                       <span className="text-2xl font-bold">
                         Kalau bruntusan bisa pakai ini gak?
@@ -321,7 +324,7 @@ export default function Home() {
                     </p>
                     <hr className="w-full h-auto"></hr>
                   </div>
-                  <div className="w-full h-auto  p-14 ">
+                  <div className="w-full h-auto p-0 md:p-14 pt-14 md:pt-6">
                     <p>
                       <span className="text-2xl font-bold">
                         Untuk wajah flek sama komedo bisa pakai ini kak?
@@ -334,7 +337,7 @@ export default function Home() {
                     </p>
                     <hr className="w-full h-auto"></hr>
                   </div>
-                  <div className="w-full h-auto  p-14 ">
+                  <div className="w-full h-auto p-0 md:p-14 pt-14 md:pt-6">
                     <p>
                       <span className="text-2xl font-bold">
                         Bikin ketergantungan enggak?

@@ -9,7 +9,7 @@ const Product = ({ id, expander }) => {
   return (
     <motion.div
       key={id}
-      className="fixed z-50 h-full w-full max-w-sm md:max-w-md top-0"
+      className="fixed z-50 h-full w-full max-w-sm md:max-w-full top-0"
       layoutId={id}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -19,7 +19,7 @@ const Product = ({ id, expander }) => {
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 0.5, scale: 1 }}
-        className="absolute z-30 h-full w-full max-w-sm md:max-w-md bg-black opacity-25"
+        className="absolute z-30 h-full w-full max-w-sm md:max-w-full bg-black opacity-25"
       ></motion.div>
       <div className="relative w-[80%] h-[90%] z-50 bg-white left-10 rounded-lg top-10 overflow-y-scroll">
         <div onClick={expander} className="absolute top-4 left-4 z-50">
