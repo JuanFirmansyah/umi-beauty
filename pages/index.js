@@ -164,7 +164,7 @@ export default function Home() {
           <SwiperSlide className="w-full text-center bg-bg-1 bg-cover items-center">
             <div className="h-full w-full">
               <div className="w-full h-full justify-center pt-40">
-                <p className="text-left text-4xl px-6 text-black drop-shadow-xl leading-relaxed font-medium bg-opacity-30 pt-8 max-w-2xl m-auto">
+                <p className="text-left text-4xl md:text-7xl px-6 text-black drop-shadow-xl leading-relaxed font-medium bg-opacity-30 pt-8 max-w-2xl m-auto">
                   COD Jabodetabek Bisa Bayar di tempat{' '}
                 </p>
               </div>
