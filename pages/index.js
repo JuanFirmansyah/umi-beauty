@@ -99,8 +99,8 @@ export default function Home() {
           onSlideChange={() => console.log('slide change')}
           onSwiper={(swiper) => console.log(swiper)}
         >
-          <SwiperSlide className="w-full bg-cover bg-bg-1 items-center text-left">
-            <div className="flex h-full w-full">
+          <SwiperSlide className="w-full h-full bg-cover bg-bg-1 items-center text-left">
+            <div className="flex h-full w-full ">
               <div className="relative w-full h-full justify-center pt-32 pl-10">
                 <p
                   className="text-2xl text-black leading-relaxed bg-opacity-30 max-w-2xl m-auto font-thin tracking-wider
@@ -108,28 +108,25 @@ export default function Home() {
                 >
                   UMI BEAUTY CARE
                 </p>
-                <p className="text-3xl text-black drop-shadow-xl leading-relaxed font-medium bg-opacity-30 pt-8 max-w-2xl m-auto">
+                <p className="md:text-7xl text-3xl tracking-wide text-[#4F1965] text-center drop-shadow-xl leading-relaxed font-medium bg-opacity-30 pt-8 max-w-2xl mt-6 m-auto">
                   Rahasia Kulit Wajah Mulus dan Glowing Sampai Lanjut Usia
                 </p>
                 <Link href="https://api.whatsapp.com/send?phone=+62%20858-2026-7217&text=Saya%20tertarik%20untuk%20membeli%20produk%20ini%20segera.">
                   <a target="_blank">
-                    <button className="relative z-30 w-auto h-auto bg-white mt-8 rounded-full mr-4 transition-all hover:cursor-pointer hover:scale-110 delay-100 ml-0 md:ml-96">
-                      <p className="px-8 py-2 text-base font-bold text-red-500">
+                    <button className="relative z-30 w-auto h-14 bg-white mt-8 rounded-full mr-4 transition-all hover:cursor-pointer hover:scale-110 delay-100 ml-0 md:ml-96">
+                      <p className="px-8 py-2 text-lg font-bold text-[#4F1965]">
                         ORDER NOW
                       </p>
                     </button>
                   </a>
                 </Link>
-                <div className="absolute z-10 w-[400px] h-[400px] md:w-[750px] md:h-[750px] top-72 md:top-28 left-24 md:left-[650px]">
-                  <img src="/images/slide1.png" />
-                </div>
               </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide className="w-full text-center bg-bg-1 bg-cover items-center">
+          <SwiperSlide className="w-full text-center bg-bg-12 bg-cover items-center">
             <div className="h-full w-full">
               <div className="w-full h-full justify-center pt-40">
-                <p className="text-4xl text-black drop-shadow-xl leading-relaxed font-medium bg-opacity-30 pt-8 max-w-2xl m-auto">
+                <p className="md:text-7xl text-3xl tracking-wide text-white text-center drop-shadow-xl leading-relaxed font-medium bg-opacity-30 pt-8 max-w-2xl mt-16 m-auto">
                   Kunjungi Official Store kami
                 </p>
                 <div className="flex w-32 m-auto">
@@ -161,10 +158,10 @@ export default function Home() {
               </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide className="w-full text-center bg-bg-1 bg-cover items-center">
+          <SwiperSlide className="w-full text-center bg-bg-13 bg-cover items-center">
             <div className="h-full w-full">
               <div className="w-full h-full justify-center pt-40">
-                <p className="text-left text-4xl md:text-7xl px-6 text-black drop-shadow-xl leading-relaxed font-medium bg-opacity-30 pt-8 max-w-2xl m-auto">
+                <p className="md:text-7xl text-3xl tracking-wide text-[#4F1965] text-center drop-shadow-xl leading-relaxed font-medium bg-opacity-30 pt-8 max-w-2xl mt-16 m-auto">
                   COD Jabodetabek Bisa Bayar di tempat{' '}
                 </p>
               </div>

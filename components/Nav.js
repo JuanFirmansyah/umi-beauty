@@ -122,7 +122,7 @@ function Nav() {
               : '-translate-y-2 opacity-0 md:-translate-x-0 md:opacity-100 h-4'
           } md:flex flex-col md:flex-row justify-end w-full container transition-all duration-500 ease-in pr-0 md:pr-24`}
         >
-          <ul className="flex flex-row text-sm md:text-2xl w-full text-red-500 font-thin justify-center items-center gap-x-7 md:gap-x-14 pt-2">
+          <ul className="flex flex-row text-sm md:text-2xl w-full text-[#4F1965] font-thin justify-center items-center gap-x-7 md:gap-x-14 pt-2">
             <li className="block py-5">
               <Link href="#paket">
                 <a className="tracking-wider">Paket</a>
@@ -143,7 +143,7 @@ function Nav() {
                 <a>QnA</a>
               </Link>
             </li>
-            <li className="block py-5 bg-red-500 text-white hover:text-red-500 hover:bg-white transition-all delay-100 p-4">
+            <li className="block py-5 bg-[#4F1965] text-white hover:text-[#4F1965] hover:bg-white transition-all delay-100 p-4">
               <Link href="#paket">
                 <a>Order</a>
               </Link>
